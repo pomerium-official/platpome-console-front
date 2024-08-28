@@ -19,7 +19,7 @@ export interface HoldersDataType {
 const sampleData = Array.from({ length: 100 }, () => ({
   ...{
     rank: 1,
-    account: 'blocksmith@pomerium.space',
+    account: 'xx@pomerium.space',
     name: '지갑명',
     address: '0x88E9c9f878341BF72AdADc071aFasfasfcasfasf473',
     amountOfTokensHeld: '0.00324321 VIC',

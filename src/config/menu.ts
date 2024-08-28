@@ -285,7 +285,7 @@ export const menu: AppMenuItem[] = [
         icon: 'pi pi-fw pi-search',
         command: () => {
           window.location.assign(
-            'https://bitbucket.org/blocksmithdevelopment/base-template/src/69213113cc3e65bf4077a5fc0907a05fe29533c6/?at=release%2Fbare'
+            'https://bitbucket.org/'
           );
         },
       },

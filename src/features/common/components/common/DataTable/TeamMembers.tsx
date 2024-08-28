@@ -13,7 +13,7 @@ import { AuthorityTag } from '@/features/common/components/common/Tag/AuthorityT
 const data = Array.from({ length: 100 }, () => ({
   ...{
     developerName: 'Nickname',
-    account: 'blocksmith@pomerium.space',
+    account: 'xx@pomerium.space',
     authority: faker.helpers.arrayElement(['OWNER', 'ADMIN', 'DEVELOPER']),
   },
 }));

@@ -177,7 +177,6 @@ export const refreshTokenProcessForAxios = async (
 //     // graphql error auth 처리
 //     // graphql은 200에 내부에 에러발생시킴. 그래야 graphql studio에서 볼 수 있음.
 //     if (response && response.config.url === '/graphql' && response.data) {
-//         // {"errors":[{"message":"Access denied! You need to be authorized to perform this action!","locations":[{"line":2,"column":3}],"path":["memberStationChargeHistories"],"extensions":{"code":"INTERNAL_SERVER_ERROR","exception":{"stacktrace":["Error: Access denied! You need to be authorized to perform this action!","    at C:\\Users\\guhyeon\\blocksmith\\projects\\instant-energy-user\\node_modules\\type-graphql\\dist\\helpers\\auth-middleware.js:13:44","    at async dispatchHandler (C:\\Users\\guhyeon\\blocksmith\\projects\\instant-energy-user\\node_modules\\type-graphql\\dist\\resolvers\\helpers.js:82:24)"]}}}],"data":null}
 //         // Access denied!
 //         const textDecoder = new TextDecoder('utf-8');
 //         const responseData = JSON.parse(textDecoder.decode(response.data));

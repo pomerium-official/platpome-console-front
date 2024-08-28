@@ -2,7 +2,7 @@
   "name": "platpome-console-frontend",
   "version": "0.0.1",
   "private": true,
-  "repository": "https://bitbucket.org/blocksmithdevelopment/base-template/src/bdf011677f43272cca34d98b0327e90fef688f4d/?at=release%2Fbare",
+  "repository": "",
   "scripts": {
     "build": "next build",
     "dev": "kill-port 3200 3201 && concurrently \"pnpm next dev -p 3200\" \"pnpm run dev-https\"",
@@ -10,7 +10,7 @@
     "sort-deps": "npx sort-package-json",
     "start": "next start --port 3200",
     "type-check": "tsc",
-    "generate-api": "swagger-typescript-api --templates swagger-typescript-api/generator-templates --axios --extract-request-params -p https://bs-cloud-platpome-platpome-console-backend.hqloud.blocksmith.xyz/swagger.json --module-name-index 0 -o src/generated/api -n api-service",
+    "generate-api": "swagger-typescript-api --templates swagger-typescript-api/generator-templates --axios --extract-request-params -p https://bs-cloud-platpome-platpome-console-backend.hqloud.xx/swagger.json --module-name-index 0 -o src/generated/api -n api-service",
     "generate-local-api": "swagger-typescript-api --templates swagger-typescript-api/generator-templates --axios --extract-request-params -p http://localhost:8200/swagger.json --module-name-index 0 -o src/generated/api -n api-service",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src"
   },

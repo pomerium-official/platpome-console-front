@@ -19,7 +19,6 @@
 7. typegraphql
 
 ###새 프로젝트 시작하기
-https://blocksmith.atlassian.net/wiki/spaces/smith/pages/281182221/base-template+-
 > **WARNING**: branch를 bare/express_*로 해주세요.
 
 ### db 접속 정보 변경
@@ -35,7 +34,6 @@ config/menu.ts
 ###레이아웃 설정가이드 - TODO
 
 ###테마 스타일 css 생성 가이드 - TODO
-https://blocksmith.atlassian.net/wiki/spaces/smith/pages/241205249/UI
 
 ###UI Kit( primereact ) theme 적용 방법
 1. public/themes에 원하는 theme.css의 폴더 명을 NEXT_PUBLIC_DEFAULT_THEME에 입력하세요.
@@ -50,7 +48,6 @@ https://github.com/typestack/class-validator 참고
 
 ###이미지 리소스 안내
 public/assets 아래 만들어주세요
-https://blocksmith.atlassian.net/wiki/spaces/smith/pages/525467656/base-template **필독**
 
 ###백엔드 연동 안내
 백엔드 인증 연동시 쿠키 설정으로 인해 백엔드를 localhost로 띄우거나, hosts파일을 수정하여 개발해주세요.
