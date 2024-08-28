@@ -1,0 +1,26 @@
+.only-icon-button {
+
+    &:global(.p-button):global(.p-component){
+        cursor:pointer;
+        align-items: flex-start;
+        border-radius: 4px;
+        display: flex;
+        gap: 10px;
+        padding: 7px;
+        position: relative;
+        width: fit-content;
+        border:none;
+        background:transparent;
+        color:#F2F2F2;
+
+        &:active {
+            background-color: #191919;
+        }
+        &:hover{
+            background-color: #262626;
+        }
+        &:disabled{
+            cursor:none;
+        }
+    }
+}

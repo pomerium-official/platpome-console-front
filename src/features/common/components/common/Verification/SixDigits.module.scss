@@ -1,0 +1,70 @@
+.sixDigitsWrap {
+  :global {
+    .sixDigits {
+      position: relative;
+      display: flex;
+      gap: 8px;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .inputWrap {
+        width: 57px;
+        height: 57px;
+        label {
+          display: block;
+          width: 100%;
+          height: 100%;
+          input {
+            height: 100%;
+            padding: 0;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+        &:nth-of-type(4) {
+          margin-left: 1em;
+        }
+      }
+      .hiddenInput {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+    .resultText {
+      display: flex;
+      align-items: center;
+      margin: 4px 0 0;
+      font-size: 12px;
+      text-transform: capitalize;
+      &:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 10px;
+      }
+      &.error {
+        color: #f53b00;
+        &:before {
+          background-image: url(/assets/images/icons/icon-error.svg);
+        }
+      }
+      &.success {
+        color: #42f500;
+        &:before {
+          background-image: url(/assets/images/icons/icon-success.svg);
+        }
+      }
+    }
+  }
+}

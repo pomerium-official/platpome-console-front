@@ -1,0 +1,55 @@
+.connectWallet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  &:after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #191919;
+    mask: url(/assets/images/icons/icon-cross-in-black-circle.svg) no-repeat
+      center center / contain;
+  }
+  :global {
+    .tip {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 26px;
+      align-items: center;
+      height: 26px;
+      padding: 0 8px;
+      border-radius: 2px;
+      white-space: nowrap;
+      color: var(--color-white);
+      background: var(--color-black);
+      transform: translate(-50%, 0);
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -9px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid var(--color-black);
+        transform: translateX(-50%);
+      }
+      .metamaskSymbol {
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        background: url(/assets/images/icons/icon-metamask.svg) no-repeat center
+          center / contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+caption,
+thead,
+tbody,
+tr,
+th,
+td,
+div,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+legend,
+input,
+textarea,
+button,
+strong,
+span,
+em,
+i {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--font-color);
+  background: var(--body-bg);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+button {
+  border: 0;
+  background: none;
+  outline: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  color: var(--color-f2f2f2);
+  &:focus {
+    outline: 0;
+  }
+  &::placeholder {
+    color: var(--font-color);
+  }
+}
+
+textarea {
+  font-family: Pretendard;
+  resize: none;
+}

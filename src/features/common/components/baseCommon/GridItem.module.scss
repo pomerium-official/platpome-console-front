@@ -1,0 +1,25 @@
+.gridItem{
+  margin:0 0 6.4vw;
+  padding:0;
+  text-align:center;
+  dt{
+    margin-bottom:2.133333vw;
+    font-size:3.2vw;
+    text-align:left;
+    color:#333936;
+    i.require{
+      color:#7a000c;
+      &:before{
+        content:'*'
+      }
+    }
+  }
+  dd{
+    margin-left:0;
+    input:not([type="checkbox"]),
+    input:not([type="radio"]){
+      //min-width:196px;
+      width:100%;
+    }
+  }
+}

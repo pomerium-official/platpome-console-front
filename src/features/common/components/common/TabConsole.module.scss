@@ -1,0 +1,44 @@
+.tabConsole{
+  :global{
+    ul{
+      display:flex;
+      justify-content:start;
+      border-bottom:1px solid var(--color-404040);
+      li{
+        margin-left:24px;
+        &:first-child{
+          margin-left:0;
+        }
+        > button{
+          display:flex;
+          align-items:center;
+          position:relative;
+          width:fit-content;
+          height:53px;
+          margin-bottom:-1px;
+          font-size:18px;
+          font-weight:700;
+          color:var(--font-color);
+          &.current{
+            background:linear-gradient(270deg, #B224EF, #7579FF);
+            -webkit-background-clip:text !important;
+            -webkit-text-fill-color: transparent;
+            &:after {
+              content:'';
+              position:absolute;
+              left:0;
+              bottom:0;
+              width:100%;
+              height:2px;
+              background:linear-gradient(270deg, #B224EF, #7579FF);
+            }
+          }
+          &:disabled{
+            cursor:default;
+            color:var(--color-404040);
+          }
+        }
+      }
+    }
+  }
+}

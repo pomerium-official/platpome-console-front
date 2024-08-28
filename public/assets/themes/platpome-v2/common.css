@@ -1,0 +1,15 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.p-component {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.p-component-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-duration: 0.2s;
+}

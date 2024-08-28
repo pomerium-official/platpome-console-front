@@ -1,0 +1,117 @@
+.tableWrapperCard:global(.p-card) {
+  background-color: #000;
+  border-radius: 1rem;
+  :global {
+    .p-card-body {
+      padding: 2rem;
+      .p-card-content {
+        padding: 0;
+      }
+    }
+    .__tag {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      height: 20px;
+      padding: 0 8px;
+      border: 1px solid;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 400;
+      &:before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin-right: 4px;
+      }
+      &.transfer {
+        border-color: #d9d6fb;
+        color: #d9d6fb;
+        background: rgba(217, 214, 251, 0.3);
+        &:before {
+          background-color: #d9d6fb;
+          mask: url(/assets/images/icons/icon-transfer.svg);
+          mask-size: cover;
+        }
+      }
+      &.sale {
+        border-color: #bbedc9;
+        color: #bbedc9;
+        background: rgba(187, 237, 201, 0.3);
+        &:before {
+          background-color: #bbedc9;
+          mask: url(/assets/images/icons/icon-sale.svg);
+          mask-size: cover;
+        }
+      }
+      &.list {
+        border-color: #d8d8d8;
+        color: #d8d8d8;
+        background: rgba(216, 216, 216, 0.3);
+        &:before {
+          background-color: #d8d8d8;
+          mask: url(/assets/images/icons/icon-list.svg);
+          mask-size: cover;
+        }
+      }
+      &.mint {
+        border-color: #f8e095;
+        color: #f8e095;
+        background: rgba(248, 224, 149, 0.3);
+        &:before {
+          background-color: #f8e095;
+          mask: url(/assets/images/icons/icon-mint.svg);
+          mask-size: cover;
+        }
+      }
+
+      &.auth {
+        text-transform: uppercase;
+        border: 0;
+        border-radius: 4px;
+        &:before {
+          width: 6px;
+          height: 6px;
+          border-radius: 99px;
+        }
+        &.owner {
+          color: #987ae6;
+          background: rgba(152, 122, 230, 0.3);
+          &:before {
+            background: #987ae6;
+          }
+        }
+        &.member {
+          color: #508ff2;
+          background: rgba(80, 143, 242, 0.3);
+          &:before {
+            background: #508ff2;
+          }
+        }
+      }
+
+      &.status {
+        border: 0;
+        text-transform: capitalize;
+        &:before {
+          border-radius: 99px;
+        }
+        &.fail {
+          color: var(--color-red);
+          background-color: rgba(245, 59, 0, 0.3);
+          &:before {
+            background-color: var(--color-red);
+          }
+        }
+        &.success {
+          color: #4ef500;
+          background-color: rgba(78, 245, 0, 0.3);
+          &:before {
+            background-color: #4ef500;
+          }
+        }
+      }
+    } //.--tag
+  }
+}

@@ -1,0 +1,118 @@
+$bg:#252525;
+$color:#d8d8d8;
+$fontSize:14px;
+
+.graphWrap{
+  i,em{
+    font-style:normal;
+  }
+  width:980px;
+  font-size:$fontSize;
+  color:$color;
+  background:$bg;
+  .legend{
+    display:flex;
+    margin-bottom:60px;
+    ul{
+      display:flex;
+      margin-left:auto;
+      li{
+        list-style-type:none;
+        margin-left:40px;
+        i{
+          display:inline-block;
+          width:10px;
+          height:10px;
+          margin-right:14px;
+          border-radius:10px;
+          background:#fff;
+        }
+      }
+    }
+  }
+  .graph{
+    position:relative;
+    width:100%;
+    .item{
+      position:relative;
+      display:flex;
+      width:100%;
+      padding-bottom:30px;
+      z-index:1;
+      .itemLabel{
+        flex:0 0 200px;
+        padding-right:14px;
+        text-align:right;
+        em{
+          margin-right:4px;
+          vertical-align:top;
+        }
+        img{
+          display:inline-block;
+          max-width:110px;
+          max-height:110px;
+        }
+        span + img{
+          display:flex;
+          margin:12px 0 0 auto;
+        }
+      }
+      .itemContent{
+        position:relative;
+        display:flex;
+        flex:0 0 calc(100% - 320px);
+        .sticks{
+          display:flex;
+          width:100%;
+          margin-top:6px;
+          div{
+            flex:0 0 calc(0% + 5px);
+            height:10px;
+            border-radius:0 10px 10px 0;
+            margin-left:-5px;
+            position:relative;
+            &:first-child{
+              margin-left:0;
+            }
+          }
+        }
+        .itemValueText{
+          position:absolute;
+          top:0;
+          left:calc(100% - 120px);
+          white-space:nowrap;
+        }
+      }
+    }
+    .bgLines{
+      position:absolute;
+      left:200px;
+      top:0;
+      width:calc(100% - 320px);
+      height:100%;
+      display:flex;
+      i{
+        display:flex;
+        height:100%;
+        width:25%;
+        border-right:1px solid #666;
+        &:first-child{
+          width:0%;
+        }
+      }
+    }
+  }
+  .bottomFigure{
+    display:flex;
+    width:100%;
+    padding:0 120px 0 200px;
+    margin-top:14px;
+    i{
+      width:25%;
+      text-align:right;
+      &:first-child{
+        width:0%;
+      }
+    }
+  }
+}

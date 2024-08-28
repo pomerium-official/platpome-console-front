@@ -1,0 +1,35 @@
+.infoMessage{
+    color:red;
+    font-style:normal;
+    font-size: 12px;
+    margin-left:5px;
+}
+.table{
+    margin-top:10px;
+}
+.buttons{
+    margin-top:10px;
+}
+.title{
+    display: inline-block !important;
+}
+
+.radio:not(:first-child){
+    margin-left:15px;
+}
+.radio{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.dropdownDateRangePickerPicker{
+    margin-left:15px;
+}
+
+.emailPart1{
+    margin-right:5px;
+}
+
+.emailPart2{
+    margin-left:5px;
+}

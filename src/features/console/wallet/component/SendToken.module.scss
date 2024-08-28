@@ -1,0 +1,244 @@
+.sendTokenModal {
+  :global {
+    .walletAddressSet {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 67px;
+      padding: 0 12px;
+      border: 1px solid var(--color-4ef500);
+      border-radius: 8px;
+      background: var(--color-191919);
+      &:before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        margin-right: 8px;
+        background: url(/assets/images/icons/icon-success.svg) no-repeat center
+          center / cover;
+      }
+      dl {
+        width: 100%;
+        dt {
+          display: flex;
+          align-items: center;
+          margin-bottom: 4px;
+          font-size: 12px;
+          font-weight: 500;
+          color: var(--color-808080);
+          &:before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
+            background-color: var(--color-808080);
+            mask: url(/assets/images/icons/icon-wallet-fill.svg) no-repeat
+              center center / cover;
+          }
+        }
+        dd {
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--color-white);
+        }
+      }
+    } //.walletAddressSet
+    .amountWrap {
+      position: relative;
+      .unitName{
+        position:absolute;
+        left:20px;
+        top:44px;
+        font-size:16px;
+        font-family: Orbitron;
+      }
+      .inputWrap {
+        input {
+          font-family: Orbitron;
+          font-size: 16px;
+          padding-left:80px;
+        }
+      }
+      .max {
+        position: absolute;
+        right: 18px;
+        top: 40px;
+        display: flex;
+        align-items: center;
+        height: 28px;
+        padding: 0 16px;
+        border: 1px solid var(--color-934ff7);
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--color-934ff7);
+      }
+    }
+    .fee {
+      display: flex;
+      align-items: center;
+      height: 54px;
+      padding: 0 18px;
+      margin-top: 32px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-f2f2f2);
+      background-color: var(--color-262626);
+      dt {
+        display: flex;
+        align-items: center;
+        &:after {
+          content: '';
+          width: 12px;
+          height: 12px;
+          margin-left: 8px;
+          background-color: var(--color-f2f2f2);
+          mask: url(/assets/images/icons/icon-info-in-square.svg) no-repeat
+            center center / cover;
+        }
+      }
+      dd {
+        margin-left: auto;
+        font-weight: 700;
+      }
+    }
+    .notEnough {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      margin-top: 16px;
+      border: 1px solid var(--color-f53b00);
+      border-radius: 8px;
+      color: var(--color-191919);
+      background: var(--color-ffeae3);
+      &:before {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
+        background: url(/assets/images/icons/icon-exclamation-in-red-circle.svg)
+          no-repeat center / cover;
+      }
+    }
+    .final {
+      .top {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .walletAddressSet {
+          width: calc(50% - 8px);
+          border: 0;
+          background: rgba(242, 242, 242, 0.8);
+          &:before{
+            display: none;
+          }
+          dl {
+            dt,
+            dd {
+              color: var(--color-191919);
+            }
+            dt {
+              &:before {
+                background-color: var(--color-191919);
+              }
+            }
+          }
+          &.console {
+            background: var(--main-gradient);
+            dt {
+              font-family: Orbitron;
+              &:before {
+                mask: url(/assets/images/symbols/symbol-pmg.svg) no-repeat
+                  center / cover;
+              }
+            }
+          }
+        }
+        .arrow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 40px;
+          height: 40px;
+          border-radius: 99px;
+          background-color: var(--color-f2f2f2);
+          transform: translate(-50%, -50%);
+          &::after {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            background: var(--color-191919);
+            mask: url(/assets/images/icons/icon-larr.svg) no-repeat center
+              center / contain;
+            transform: rotate(180deg);
+          }
+        }
+      } //.top
+      .summary {
+        padding: 18px;
+        margin-top: 32px;
+        border-radius: 8px;
+        background: var(--color-191919);
+        dl {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          &:not(.total) {
+            margin-bottom: 16px;
+            dt {
+              display: flex;
+              align-items: center;
+              font-weight: 500;
+              &:after {
+                content: '';
+                display: block;
+                width: 12px;
+                height: 12px;
+                margin-left: 8px;
+                background-color: var(--color-f2f2f2);
+                mask: url(/assets/images/icons/icon-info-in-square.svg)
+                  no-repeat center center / contain;
+              }
+            }
+          }
+          dd {
+            margin-left: auto;
+            font-weight: 700;
+          }
+          &.total {
+            padding-top: 16px;
+            border-top: 1px solid var(--color-404040);
+            dd {
+              font-size: 16px;
+              font-weight: 700;
+              color: #a267f8;
+            }
+          }
+        }
+      } //.summary
+      .tokenName {
+        display: flex;
+        align-items: center;
+        font-family: Orbitron;
+        font-size: 16px;
+        i {
+          display: block;
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+      }
+    } //.final
+  } //:global
+}

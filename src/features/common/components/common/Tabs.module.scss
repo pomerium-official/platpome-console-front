@@ -1,0 +1,129 @@
+// 폰트 사이즈
+.underline:global(.p-tabmenu):global(.f-24), .solid:global(.p-tabmenu):global(.f-24) {
+  :global {
+    .p-menuitem-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.underline:global(.p-tabmenu):global(.f-18),.solid:global(.p-tabmenu):global(.f-18) {
+  :global {
+    .p-menuitem-text {
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 150%;
+    }
+  }
+}
+
+.underline:global(.p-tabmenu):global(.f-14),.solid:global(.p-tabmenu):global(.f-14) {
+  :global {
+    .p-menuitem-text {
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+    }
+  }
+}
+
+
+// 밑줄 탭 메뉴
+.underline:global(.p-tabmenu) {
+  border: none;
+
+  :global {
+    .p-tabmenu-nav {
+      border-color: transparent;
+
+      .p-tabmenuitem:not(:first-child) {
+        margin-left: 1.5rem;
+      }
+
+      .p-tabmenuitem {
+        .p-menuitem-link {
+          border-radius: 0;
+          padding: 0.75rem 0.2rem;
+
+          border-bottom-style: solid;
+          border-bottom-color: transparent;
+          border-bottom-width: 0.13rem;
+
+          .p-menuitem-text {
+            line-height: 150%;
+          }
+        }
+      }
+
+      .p-tabmenuitem.p-highlight {
+        .p-menuitem-link {
+          border-bottom-style: solid;
+          border-bottom-width: 0.13rem;
+          //padding:0;
+          //border-color: transparent;
+          border-image: linear-gradient(-90deg, rgb(178, 36, 239) 0%, rgb(117, 121, 255) 100%) 1;
+
+          .p-menuitem-text {
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent;
+            background: linear-gradient(-90deg, rgb(178, 36, 239) 0%, rgb(117, 121, 255) 100%);
+            background-clip: text;
+            color: transparent;
+            line-height: 150%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 버튼형 탭 메뉴
+.solid:global(.p-tabmenu) {
+  border: none;
+
+
+  :global {
+    .p-tabmenu-nav {
+      border-color: transparent;
+
+      .p-tabmenuitem:not(:first-child) {
+        margin-left: 0.94rem;
+      }
+
+      .p-tabmenuitem {
+        .p-menuitem-link {
+          border-radius: 0.5rem;
+          padding: 0.5rem 1rem;
+
+
+          height:auto;
+
+          border:none;
+          //border-bottom-style: solid;
+          //border-bottom-color: transparent;
+          //border-bottom-width: 0.13rem;
+
+          .p-menuitem-text {
+            color: var(--neutral-n-60, #B3B3B3);
+            line-height: 150%;
+          }
+        }
+      }
+
+      .p-tabmenuitem.p-highlight {
+        .p-menuitem-link {
+          background: var(--neutral-n-800, #262626);
+          border-bottom:none;
+
+          .p-menuitem-text {
+            color: var(--neutral-n-10, #F2F2F2);
+          }
+        }
+      }
+    }
+  }
+
+}
+

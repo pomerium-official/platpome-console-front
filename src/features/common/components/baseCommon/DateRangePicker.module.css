@@ -1,0 +1,24 @@
+.wave{
+    margin:0 10px;
+}
+
+.container div[class*="p-button"]{
+    margin-left:5px;
+}
+.container span + div[class*="p-button"]{
+    margin-left:15px;
+}
+
+.wrong em{
+    position:absolute;
+    left:0;
+    top:38px;
+    font-size:12px;
+    font-style:normal;
+    color:red;
+}
+
+.wrong input[type='text']{
+    border:1px solid #f00;
+}
+

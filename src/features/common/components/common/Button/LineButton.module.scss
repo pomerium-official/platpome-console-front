@@ -1,0 +1,95 @@
+.line-button:global(.p-component.p-button) {
+    border-radius: 1.5rem;
+    background: transparent;
+    border: 1px solid var(--main-pp-40-m, #934FF7);
+    color: var(--main-pp-40-m, #934FF7);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.line-button:global(.p-component.p-button):enabled:hover,
+.line-button:global(.p-component.p-button):not(button):not(a):not(:global(.p-disabled)):hover
+{
+    border: 1px solid var(--main-pp-30, #A267F8);
+    background: transparent;
+    color: var(--main-pp-30, #A267F8);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+
+}
+
+.line-button:global(.p-component.p-button.p-disabled) {
+    border: 1px solid var(--neutral-n-600, #404040);
+    background: transparent;
+    color: var(--neutral-n-600, #404040);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+
+.line-button.neutral:global(.p-component.p-button) {
+    border-radius: 1.5rem;
+    border: 1px solid var(--neutral-n-30, #D8D8D8);
+    color: var(--neutral-n-30, #D8D8D8);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.line-button.neutral:global(.p-component.p-button):enabled:hover,
+.line-button.neutral:global(.p-component.p-button):not(button):not(a):not(:global(.p-disabled)):hover
+{
+    border: 1px solid var(--neutral-n-10, #F2F2F2);
+    color: var(--neutral-n-10, #F2F2F2);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    box-shadow: none;
+}
+
+.line-button.neutral:global(.p-component.p-button.p-disabled) {
+    border: 1px solid var(--neutral-n-700, #333);
+    color: var(--neutral-n-700, #333);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+
+
+.line-button:global(.p-component):global(.p-button).xlarge{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.line-button:global(.p-component):global(.p-button).large{
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+
+.line-button:global(.p-component):global(.p-button).medium{
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+
+
+.line-button:global(.p-component):global(.p-button).small{
+    padding: 0.625rem 1.25rem;
+    font-size: 0.75rem;
+}
+
+.line-button:global(.p-component):global(.p-button).xsmall{
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}

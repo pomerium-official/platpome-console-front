@@ -1,0 +1,97 @@
+.p-dialog {
+    border-radius: 16px;
+    /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);*/
+    /*border: 0 none;*/
+    border: 0.5px solid #DEDEDE;
+}
+.p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    background: #ffffff;
+    color: #343a40;
+    padding-top:32px;
+    padding-left:24px;
+    padding-right:24px;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+.p-dialog .p-dialog-header .p-dialog-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.p-dialog .p-dialog-header .p-dialog-header-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #6c757d;
+    border: 0 none;
+    background: transparent;
+    border-radius: 50%;
+    /*transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;*/
+    margin-right: 0.5rem;
+}
+.p-dialog .p-dialog-header .p-dialog-header-icon:enabled:hover {
+    color: #343a40;
+    border-color: transparent;
+    background: #e9ecef;
+}
+.p-dialog .p-dialog-header .p-dialog-header-icon:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    /*box-shadow: 0 0 0 0.2rem #C7D2FE;*/
+}
+.p-dialog .p-dialog-header .p-dialog-header-icon:last-child {
+    margin-right: 0;
+}
+.p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    padding-left:24px;
+    padding-right:24px;
+}
+.p-dialog .p-dialog-footer {
+    border-top: 0 none;
+    background: #ffffff;
+    color: #495057;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: right;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.p-dialog .p-dialog-footer button {
+    margin: 0 0.5rem 0 0;
+    width: auto;
+}
+.p-dialog.p-confirm-dialog .p-confirm-dialog-icon {
+    font-size: 2rem;
+}
+.p-dialog.p-confirm-dialog .p-confirm-dialog-message {
+    margin-left: 1rem;
+}
+
+/*.p-dialog-header-close {*/
+/*    visibility: hidden;*/
+/*}*/
+
+
+.p-dialog-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+    letter-spacing: -0.005em;
+    /* Default/BK */
+    color: #222222;
+}
+
+.p-dialog-title .sub-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+    letter-spacing: -0.005em;
+    /* Default/Dark Gray */
+    color: #707070;
+
+    margin-bottom:10px;
+}

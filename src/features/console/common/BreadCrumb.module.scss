@@ -1,0 +1,15 @@
+.breadCrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  :global {
+    .slash {
+      margin: 0 8px;
+    }
+    strong {
+      font-weight: 400;
+      color: var(--color-f2f2f2);
+    }
+  }
+}

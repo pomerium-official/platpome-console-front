@@ -1,0 +1,25 @@
+export type UserInfo = {
+  exp: number;
+  iat: number;
+  auth_time: number;
+  jti: string;
+  iss: string;
+  aud: string;
+  sub: string;
+  typ: string;
+  azp: string;
+  session_state: string;
+  at_hash: string;
+  acr: string;
+  'allowed-origins': string[];
+  realm_access: { roles: string[] };
+  resource_access: { account: { roles: string[] } };
+  scope: string;
+  sid: string;
+  email_verified: boolean;
+  gender: string;
+  nickname: string;
+  preferred_username: string;
+  email: string;
+  nonce: string;
+};

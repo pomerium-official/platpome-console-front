@@ -1,0 +1,115 @@
+.filterWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  :global {
+    .selectedConditionsWrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 8px;
+      span {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        padding: 0 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-262626);
+        background: var(--color-e6e6e6);
+        button {
+          display: block;
+          width: 12px;
+          height: 12px;
+          margin-left: 10px;
+          background: var(--color-262626);
+          mask: url(/assets/images/icons/icon-x-in-circle-fill.svg);
+          mask-size: 100%;
+        }
+      }
+    }
+    .btnFilter {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      background: var(--color-f2f2f2);
+      mask: url(/assets/images/icons/icon-filter.svg);
+      mask-size: 24px;
+    }
+    .filterLayer {
+      position: absolute;
+      top: calc(100% + 5px);
+      right: -16px;
+      width: 400px;
+      border: 1px solid var(--color-262626);
+      border-radius: 8px;
+      box-shadow: 0px 0px 60px 0px rgba(255, 255, 255, 0.3);
+      background-color: var(--color-black);
+      z-index: 1;
+      &Header {
+        display: flex;
+        align-items: center;
+        height: 68px;
+        padding: 16px 24px;
+        font-size: 24px;
+        font-weight: 700;
+        border-bottom: 1px solid var(--color-404040);
+      }
+      &Content {
+        padding: 24px;
+        .accordion {
+          dl {
+            dt {
+              height: 56px;
+              button {
+                font-size: 16px;
+              }
+            }
+            dd {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              min-height: auto;
+              > button {
+                display: flex;
+                align-items: center;
+                height: 30px;
+                padding: 0 16px;
+                border-radius: 8px;
+                color: var(--color-f2f2f2);
+                background-color: var(--color-262626);
+                &.checked {
+                  color: var(--color-191919) !important;
+                  background-color: var(--color-f2f2f2) !important;
+                }
+              }
+            }
+            &.open {
+              dd {
+                padding: 16px 0;
+              }
+            }
+          }
+        }
+      }
+      &Footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        padding: 8px 24px 24px;
+      }
+      &Close {
+        position: absolute;
+        right: 24px;
+        top: 26px;
+        width: 14px;
+        height: 14px;
+        background-color: var(--color-f2f2f2);
+        mask: url(/assets/images/icons/icon-x.svg);
+        mask-size: 14px;
+      }
+    } //.fitlerLayer
+  } //:global
+}

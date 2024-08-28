@@ -1,0 +1,92 @@
+.solid-button:global(.p-component.p-button) {
+    border-radius: 1.5rem;
+    background: var(--gra-gra-0-main, linear-gradient(315deg, #B224EF 0%, #7579FF 100%));
+    color: var(--neutral-n-800, #262626);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.solid-button:global(.p-component.p-button):enabled:hover,
+.solid-button:global(.p-component.p-button):not(button):not(a):not(:global(.p-disabled)):hover
+{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(315deg, #B224EF 0%, #7579FF 100%);
+    color: var(--neutral-n-800, #262626);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    box-shadow: 0 0 20px 0 #A267F8;
+}
+
+.solid-button:global(.p-component.p-button.p-disabled) {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(315deg, #B224EF 0%, #7579FF 100%);
+    color: var(--neutral-n-800, #262626);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+
+.solid-button.neutral:global(.p-component.p-button) {
+    border-radius: 1.5rem;
+    background: var(--neutral-n-30, #D8D8D8);
+    color: var(--neutral-n-800, #262626);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.solid-button.neutral:global(.p-component.p-button):enabled:hover,
+.solid-button.neutral:global(.p-component.p-button):not(button):not(a):not(:global(.p-disabled)):hover
+{
+    background: var(--neutral-n-10, #F2F2F2);
+    color: var(--neutral-n-800, #262626);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    box-shadow: none;
+}
+
+.solid-button.neutral:global(.p-component.p-button.p-disabled) {
+    background: var(--neutral-n-700, #333);
+    color: var(--neutral-n-800, #262626);
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+
+
+.solid-button:global(.p-component):global(.p-button).xlarge{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.solid-button:global(.p-component):global(.p-button).large{
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+
+.solid-button:global(.p-component):global(.p-button).medium{
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+
+
+.solid-button:global(.p-component):global(.p-button).small{
+    padding: 0.625rem 1.25rem;
+    font-size: 0.75rem;
+}
+
+.solid-button:global(.p-component):global(.p-button).xsmall{
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}

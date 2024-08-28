@@ -1,0 +1,34 @@
+.nftCreated{
+  :global{
+    .wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 64px 410px;
+      .title{
+        white-space: nowrap;
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .description{
+        color: #808080;
+        margin-top: 16px;
+        text-align: center;
+      }
+      .nftPreviewWrap{
+        margin-top: 46px;
+      }
+      .bottomWrap{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 46px;
+        button{
+          margin-top: 8px;
+          height: 48px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

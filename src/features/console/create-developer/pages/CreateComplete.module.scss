@@ -1,0 +1,22 @@
+.createComplete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 940px;
+  padding-bottom: 500px;
+  background: url(/assets/images/console/bg-create-developer.gif) no-repeat
+    center bottom;
+  background-size: contain;
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(275deg, #b224ef 0%, #7579ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    margin-bottom: 32px;
+  }
+}

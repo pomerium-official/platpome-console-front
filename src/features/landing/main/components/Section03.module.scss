@@ -1,0 +1,325 @@
+.section03 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #000 url(/assets/images/platpome/bg-section03.png) no-repeat top
+    center;
+  :global {
+    .content01 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 240px 0;
+      .pomerium {
+        display: block;
+        width: fit-content;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        opacity: 0;
+        background: linear-gradient(266deg, #a77ce8, #5370e1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      p {
+        text-align: center;
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--color-f2f2f2);
+        opacity: 0;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        width: 1100px;
+        padding: 24px 0;
+        margin-top: 80px;
+        border-radius: 20px;
+        box-shadow: 0px 8px 16px rgba(178, 155, 245, 0.3);
+        background-color: #000;
+        opacity: 0;
+        li {
+          width: 33.3333%;
+          padding: 16px 0;
+          border-left: 1px solid #595959;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 500;
+          color: var(--color-808080);
+          &:first-child {
+            border-left: 0;
+          }
+          strong {
+            display: block;
+            margin-bottom: 16px;
+            font-family: Orbitron;
+            font-size: 48px;
+            color: var(--color-a267f8);
+          }
+        }
+      }
+      &.action {
+        .pomerium {
+          animation: fadeIn 0.4s forwards;
+        }
+        .txt01 {
+          animation: fadeIn 0.4s forwards 0.2s;
+        }
+        .txt02 {
+          animation: fadeIn 0.4s forwards 0.4s;
+        }
+        ul {
+          animation: fadeIn 0.4s forwards 0.6s;
+        }
+      }
+    } //.content01
+    .content02 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 280px 0 394px;
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        dl {
+          dt {
+            font-size: 28px;
+            font-weight: 700;
+            > .gradient {
+              display: block;
+              opacity: 0;
+            }
+            strong {
+              display: block;
+              margin-top: 8px;
+              font-size: 52px;
+              line-height: 1.6;
+              color: var(--color-f2f2f2);
+              > span {
+                display: block;
+                opacity: 0;
+              }
+            }
+          }
+          dd {
+            margin-top: 40px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.6;
+            color: var(--font-color);
+            span {
+              display: block;
+              opacity: 0;
+            }
+          }
+        }
+        .rocket {
+          opacity: 0;
+        }
+      }
+      &.action {
+        dt {
+          > .gradient {
+            animation: fadeIn 0.4s forwards;
+          }
+          .txt01 {
+            animation: fadeIn 0.4s forwards 0.2s;
+          }
+          .txt02 {
+            animation: fadeIn 0.4s forwards 0.4s;
+          }
+        }
+        dd {
+          .txt03 {
+            animation: fadeIn 0.4s forwards 0.6s;
+          }
+          .txt04 {
+            animation: fadeIn 0.4s forwards 0.8s;
+          }
+          .txt05 {
+            animation: fadeIn 0.4s forwards 1s;
+          }
+          .txt06 {
+            animation: fadeIn 0.4s forwards 1.2s;
+          }
+        }
+        .rocket {
+          :local {
+            animation: rocket 1.5s forwards;
+          }
+        }
+      }
+    } //.content02
+    .content03 {
+      display: flex;
+      justify-content: center;
+      padding: 180px 0;
+      > div {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 216px;
+          left: 50%;
+          width: 38px;
+          height: 0;
+          background: url(/assets/images/platpome/darr-tri.png);
+          transform: translateX(-50%);
+        }
+        p {
+          margin: 0 auto;
+          font-size: 64px;
+          font-weight: 700;
+          background: linear-gradient(91deg, #96fbc4, #f9f586);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      &.action {
+        > div {
+          animation: fadeIn 0.4s forwards;
+          &:after {
+            :local {
+              animation: arrow 1s infinite 0.4s;
+            }
+          }
+        }
+      }
+    } //.content03
+    .content04 {
+      display: flex;
+      justify-content: center;
+      padding: 180px 0;
+      > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        dl {
+          margin-bottom: 80px;
+          text-align: center;
+          dt {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--color-white);
+            .gradient {
+              width: fit-content;
+              margin: 0 auto 8px;
+              font-size: 28px;
+            }
+            span {
+              display: block;
+              opacity: 0;
+            }
+          }
+          dd {
+            margin-top: 40px;
+            font-size: 20px;
+            opacity: 0;
+          }
+        }
+        img {
+          display: block;
+          opacity: 0;
+          &.img02 {
+            position: absolute;
+            bottom: 154px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.545);
+            border-radius: 4px;
+            overflow: hidden;
+          }
+        }
+      }
+      &.action {
+        .gradient {
+          animation: fadeIn 0.4s forwards;
+        }
+        .txt01 {
+          animation: fadeIn 0.4s forwards 0.2s;
+        }
+        .txt02 {
+          animation: fadeIn 0.4s forwards 0.4s;
+        }
+        .img01 {
+          animation: fadeIn 0.4s forwards 0.8s;
+        }
+        .img02 {
+          :local {
+            animation: app 1s forwards 1.4s;
+          }
+        }
+      }
+    } //.content04
+  } //:global
+}
+
+@keyframes app {
+  0% {
+    bottom: 154px;
+    transform: translateX(-50%) scale(0.545);
+    box-shadow: none;
+    opacity: 0;
+  }
+  50% {
+    bottom: 154px;
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0px 0px 30px 0px rgba(255, 249, 235, 0.1);
+    opacity: 1;
+  }
+  100% {
+    bottom: -37px;
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0px 0px 30px 0px rgba(255, 249, 235, 0.5);
+    opacity: 1;
+  }
+}
+
+@keyframes rocket {
+  from {
+    opacity: 0;
+    transform: translate(-600px, 600px) scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    height: 0;
+  }
+  24.9% {
+    height: 0;
+  }
+  25% {
+    height: 25px;
+  }
+  49.9% {
+    height: 25px;
+  }
+  50% {
+    height: 41px;
+  }
+  74.9% {
+    height: 41px;
+  }
+  75% {
+    height: 64px;
+  }
+  100% {
+    height: 64px;
+  }
+}

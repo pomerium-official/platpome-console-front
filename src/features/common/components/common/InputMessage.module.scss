@@ -1,0 +1,32 @@
+.resultText{
+  text-transform: capitalize;
+  display: flex;
+  margin: 4px 0 0;
+  font-size: 12px;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 10px;
+  }
+
+  &.error{
+    color: #f53b00;
+    &:before {
+      background-image: url(/assets/images/icons/icon-error.svg);
+    }
+  }
+
+  &.success{
+    color: #42f500;
+    &:before {
+      background-image: url(/assets/images/icons/icon-success.svg);
+    }
+  }
+}

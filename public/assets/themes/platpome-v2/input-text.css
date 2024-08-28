@@ -1,0 +1,40 @@
+.p-inputtext {
+    font-family: "Pretendard";
+    font-size: 16px;
+    color: #495057;
+    background: #ffffff;
+    padding: 0.75rem 0.75rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    border: 0.8px solid #DEDEDE;
+    border-radius: 6px;
+}
+.p-inputtext.p-invalid.p-component {
+    border: 0.8px solid #DA5157;
+    background: #FFF5F6;
+}
+.p-inputtext:enabled:hover {
+    border: 0.8px solid #222222;
+}
+.p-inputtext:enabled:focus {
+    outline: 0 none;
+    /*outline-offset: 0;*/
+    /*box-shadow: 0 0 0 0.2rem #C7D2FE;*/
+    border: 0.8px solid #222222;
+}
+
+.p-inputtext.p-inputtext-sm {
+    font-size: 0.875rem;
+    padding: 0.65625rem 0.65625rem;
+}
+.p-inputtext.p-inputtext-lg {
+    font-size: 1.25rem;
+    padding: 0.9375rem 0.9375rem;
+}
+
+.p-component:disabled.p-inputtext:disabled {
+    opacity:1;
+    background: #EFF0F3;
+    border: 0.8px solid #DEDEDE;
+    color:#cbcbcb;
+}

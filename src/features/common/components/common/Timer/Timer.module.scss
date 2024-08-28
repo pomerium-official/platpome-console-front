@@ -1,0 +1,14 @@
+.timer {
+  position: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  :global {
+    .text {
+      margin-right: 8px;
+      color: #b3b3b3;
+    }
+    .time {
+      color: #f2f2f2;
+    }
+  }
+}

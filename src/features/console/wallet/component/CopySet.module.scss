@@ -1,0 +1,49 @@
+.copySet {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 6px;
+  background-color: var(--color-333);
+  &:global(.column) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    height: auto;
+    padding: 12px;
+  }
+  :global {
+    .second {
+      display: flex;
+      align-items: center;
+    }
+    .name {
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+      &:not(.custom) {
+        width: 14px;
+        height: 14px;
+        background: var(--color-f2f2f2);
+        mask: url(/assets/images/icons/icon-wallet-fill.svg) no-repeat center
+          center / contain;
+      }
+    }
+    .address {
+      //max-width: 284px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+    .btn {
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+      background: var(--color-f2f2f2);
+      mask: url(/assets/images/icons/icon-copy.svg) no-repeat center center /
+        contain;
+    }
+  }
+}

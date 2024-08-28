@@ -1,0 +1,189 @@
+.walletDetailWrap {
+  :global {
+    .pageTitle {
+      margin: 0 0 16px;
+      border-bottom: 0;
+      h1 {
+        display: flex;
+        align-items: center;
+      }
+      p {
+        padding: 0;
+      }
+    }
+    .copySet {
+      margin-bottom: 56px;
+    }
+    .tabConsole{
+      .setting{
+        .noAccess{
+          display:none;
+          align-items:center;
+          gap:4px;
+          position:absolute;
+          left:0;
+          top:-36px;
+          width:fit-content;
+          height:44px;
+          padding:0 10px;
+          border:1px solid var(--color-808080);
+          border-radius:8px;
+          font-size:12px;
+          font-weight:700;
+          white-space:nowrap;
+          box-shadow: 0 4px 6px rgba(255, 255, 255, 0.10);
+          color:var(--color-f2f2f2);
+          background:var(--color-191919);
+          &:before{
+            content:'';
+            display:block;
+            width:24px;
+            height:24px;
+            background:var(--color-f2f2f2);
+            mask:url(/assets/images/icons/no-access.svg) no-repeat center center / contain;
+          }
+        }
+        &:disabled{
+          &:hover{
+            .noAccess{
+              display:flex;
+            }
+          }
+        }
+      }
+    }
+    .walletInfo {
+      .rowTable {
+        th {
+          padding: 14px 0;
+        }
+        td {
+          padding: 14px;
+        }
+      }
+    }
+    .tokens {
+      .top {
+        display: flex;
+        align-items: center;
+        .p-button {
+          margin-left: auto;
+        }
+      }
+      .tokenList {
+        margin-top: 24px;
+      }
+      .copySet {
+        margin: 0;
+        .iconContractAddress {
+          display: block;
+          width: 12px;
+          height: 12px;
+          margin-right: 5px;
+          background: var(--color-808080);
+          mask: url(/assets/images/icons/icon-contract-address-fill.svg)
+            no-repeat center / contain;
+        }
+        .address {
+          font-size: 14px;
+          color: var(--color-f2f2f2);
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .tokenItem {
+        display: flex;
+        align-items: center;
+        height: 91px;
+        padding: 0 20px;
+        border-radius: 16px;
+        background-color: var(--color-black);
+        .tokenName {
+          display: flex;
+          align-items: center;
+          padding-right: 16px;
+          .tokenIcon {
+            width: 45px;
+            height: 45px;
+            margin-right: 12px;
+          }
+          dl {
+            dt {
+              font-size: 18px;
+              font-weight: 700;
+              color: var(--color-f2f2f2);
+            }
+            dd {
+              font-size: 12px;
+              font-weight: 500;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: var(--color-808080);
+            }
+          }
+        }
+        .amount {
+          margin-left: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 6px;
+          strong {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-white);
+          }
+          .price {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--color-808080);
+            display: flex;
+            align-items: center;
+          }
+        }
+        .contract {
+          padding-left: 24px;
+          .goContract {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #0057ff;
+            &:after {
+              content: '';
+              display: block;
+              width: 16px;
+              height: 16px;
+              margin-left: 4px;
+              background: #0057ff;
+              mask: url(/assets/images/icons/icon-arrow-top-right-in-circle.svg)
+                no-repeat center / contain;
+            }
+          }
+        }
+      }
+    }
+    .featureWrap {
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid var(--color-404040);
+      border-radius: 8px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            color: var(--color-f2f2f2);
+          }
+        }
+      }
+    }
+  } //:global
+}

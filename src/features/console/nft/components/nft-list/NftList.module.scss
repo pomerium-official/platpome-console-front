@@ -1,0 +1,328 @@
+.nftListWrap {
+  position: relative;
+  width: 100%;
+
+  :global {
+    .more {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: -40px;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 12px;
+        margin-left: 8px;
+        background: var(--font-color);
+        mask: url(/assets/images/icons/caret-down.svg) no-repeat center center;
+        mask-size: cover;
+        transform: rotate(-90deg);
+      }
+
+      &:hover {
+        color: var(--color-999);
+
+        &:after {
+          background: var(--color-999);
+        }
+      }
+    }
+
+    .listTop {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      height: 41px;
+      margin: 0 0 16px;
+
+      > button {
+        width: 34px;
+        height: 34px;
+      }
+
+      .filterWrap {
+        .btnFilter {
+          mask-size: 20px;
+          mask-repeat: no-repeat;
+          mask-position: center center;
+        }
+      }
+    }
+
+    .nftList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px 20px;
+
+      > li {
+        width: 329px;
+        height: 489px;
+        transition-duration: 0.2s;
+        background: url(/assets/images/console/bg-nft-skeleton.svg) no-repeat center center;
+
+        &:hover {
+          transform: translate(0, -12px);
+          z-index: 1;
+          transition: all 0.2s;
+        }
+
+        .nftCard {
+          width: 329px;
+          height: 489px;
+
+          .imgDiv {
+            position: relative;
+            width: 329px;
+            height: 329px;
+            border-radius: 16px 16px 0 0;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+
+            > img {
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              width: 100% !important;
+              height: 100% !important;
+              object-fit: cover !important;
+            }
+
+            .figures {
+              display: flex;
+              align-items: center;
+              position: absolute;
+              right: 16px;
+              top: 16px;
+              height: 29px;
+              padding: 0 12px;
+              border-radius: 99px;
+              background-color: var(--color-191919);
+
+              &:before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
+                background: url(/assets/images/icons/icon-card-multi.svg);
+              }
+            }
+
+            .detail {
+              display: none;
+              align-items: center;
+              position: absolute;
+              left: 50%;
+              bottom: 32px;
+              height: 40px;
+              padding: 0 14px;
+              border-radius: 99px;
+              font-size: 16px;
+              font-weight: 500;
+              color: #fff;
+              transform: translate(-50%, 0);
+              background: rgba(123, 123, 123, 0.8);
+              backdrop-filter: blur(3px);
+            }
+          }
+
+          .infoDiv {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            height: calc(489px - 329px);
+            padding: 16px 16px 20px;
+            border-radius: 0 0 16px 16px;
+            background-color: var(--color-white);
+
+            .appName {
+              display: block;
+              margin-bottom: 8px;
+              font-size: 14px;
+              font-weight: 600;
+              text-decoration: underline;
+              color: var(--color-121212);
+            }
+
+            .nftName {
+              color: var(--color-434343);
+            }
+
+            .nftUtils {
+              position: absolute;
+              top: 16px;
+              right: 16px;
+
+              .iconBtn {
+                background: none;
+
+                &:hover {
+                  background-color: var(--color-d8d8d8);
+                }
+              }
+
+              .cardMenuLayer {
+                border: 1px solid #d8d8d8;
+                color: #262626;
+                background: #fff;
+
+                ul {
+                  + ul {
+                    &:before {
+                      background-color: #d8d8d8;
+                    }
+                  }
+                }
+              }
+            }
+
+            .state {
+              position: relative;
+              width: 100%;
+              margin-top: 16px;
+
+              > strong {
+                display: block;
+                margin-bottom: 14px;
+                color: var(--color-121212);
+
+                &.soldOut {
+                  color: var(--color-red);
+                }
+              }
+
+              .p-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: var(--color-6919e0);
+              }
+
+              .restInfo {
+                display: flex;
+                align-items: center;
+                font-size: 11px;
+                color: var(--color-434343);
+
+                &:before {
+                  content: '';
+                  display: block;
+                  width: 14px;
+                  height: 14px;
+                  margin-right: 2px;
+                  background: url(/assets/images/icons/icon-hexagon.svg);
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .imgDiv {
+              .detail {
+                display: flex;
+              }
+
+              &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(25, 25, 25, 0.3);
+              }
+            }
+          }
+        }
+
+        //.nftCard
+      }
+
+      //li
+    }
+
+    //.nftList
+    .noList {
+      width: 100%;
+      border-radius: 16px;
+      background: var(--color-262626);
+
+      &:not(.inNft) {
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 398px;
+        }
+      }
+
+      strong {
+        display: block;
+        margin-top: 16px;
+        font-size: 28px;
+        color: var(--color-f2f2f2);
+      }
+
+      p {
+        margin-top: 4px;
+        font-size: 16px;
+        color: var(--color-ccc);
+      }
+
+      .p-button {
+        margin-top: 24px;
+      }
+
+      &.inNft {
+        position: relative;
+        background: none;
+
+        .bg {
+          display: flex;
+          gap: 20px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+
+          div {
+            width: 25%;
+            border-radius: 16px;
+            background: linear-gradient(
+                            180deg,
+                            rgba(38, 38, 38, 0.8) 0%,
+                            rgba(38, 38, 38, 0) 100%
+            );
+          }
+        }
+
+        .content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+          text-align: center;
+          height: 398px;
+        }
+      }
+    }
+
+    //.noList
+  }
+
+  //:global
+}

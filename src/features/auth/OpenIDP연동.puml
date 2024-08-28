@@ -1,0 +1,126 @@
+@startuml
+title 웹OpenIDP연동
+
+actor 브라우저
+database localStorage
+database sessionStorage
+queue RefreshCallbackQueue
+
+participant 프론트서버
+database HttpOnlyCookie
+participant 통합인증
+
+
+group 사이트 접속 및 사용자 정보 조회 프로세스 - useUserInfo()
+    브라우저 -> localStorage : idToken 조회 요청
+    브라우저 <- localStorage : idToken 응답
+    alt idToken이 없을 경우
+        alt needLogin
+            브라우저 -> 브라우저 : 로그인 화면으로 이동
+        end
+'        브라우저 -> 통합인증 : 로그인 프로세스
+'        note across: 로그인 프로세스는 하단 group으로 별도 표시
+        브라우저 -> 브라우저 : return user as undefined, loading false
+    end
+    group idToken validate parsing
+        group jwks 공개키 조회
+            브라우저 -> sessionStorage : jwks 공개키 조회
+            브라우저 <- sessionStorage : jwks 공개키
+            alt 공개키 없을 경우 조회 및 캐시
+            브라우저 -> 통합인증 : jwks 공개키 요청 /realms/{realm-name}/protocol/openid-connect/certs
+            통합인증 -> 브라우저 : jwks 공개키
+            브라우저 -> sessionStorage : jwks 공개키 저장
+            end
+        end
+        브라우저 -> 브라우저 : idToken jwt 토큰 validate & parsing (idToken, jwks 공개키)
+    end
+    alt jwt 토큰 validate 실패 프로세스 - RefreshToken Process
+        note across: RefreshToken 프로세스는 한 번만 일어나야한다. 나머지 호출들은 queue에 담아뒀다가 결과값을 공유한다.
+
+        alt 이미 진행중인 RefreshToken Process가 있으면
+            브라우저 -> RefreshCallbackQueue : RefreshCallbackQueue 추가
+            note across: RefreshCallbackQueue에는 아래 두 가지 프로세스가 들어갈 수 있다.
+            alt idToken 조회 인 경우
+                브라우저 -> 브라우저 : idToken jwt 토큰 validate & parsing (idToken, jwks 공개키)
+                브라우저 -> 브라우저 : return user
+            else Resource 서버 조회인 경우
+                브라우저 -> 리소스서버 : /api/data 호출 (HttpOnlyCookie)
+            end
+        end
+        브라우저 -> 프론트서버: /auth/refreshToken
+        프론트서버 -> HttpOnlyCookie: encryptedRefreshToken 조회
+        프론트서버 <- HttpOnlyCookie: encryptedRefreshToken 응답
+        alt encryptedRefreshToken 없을 경우
+            브라우저 <- 프론트서버 : 401
+'            브라우저 -> 통합인증 : 로그인 프로세스
+            브라우저 ->브라우저 : return user as undefined
+        end
+        프론트서버 -> 프론트서버: refreshToken - decrypt(encryptedRefreshToken)
+        프론트서버 -> 통합인증: /realms/{realm-name}/protocol/openid-connect/token (refreshToken) 호출
+        alt 토큰리프레시 실패
+            통합인증 -> 프론트서버 : 401
+            프론트서버 -> 브라우저 : 401
+'            브라우저 -> 통합인증 : 로그인 프로세스
+            브라우저 ->브라우저 : return user as undefined
+            note across : useUserInfo에서 호출했고 needLogin인 경우에는 로그인 화면으로 이동
+        end
+        통합인증 -> 프론트서버: /realms/{realm-name}/protocol/openid-connect/token (refreshToken) 응답
+        group 토큰 저장 프로세스
+            프론트서버 -> 프론트서버: 토큰 복호화 가능한 암호화처리(refreshToken)
+            프론트서버 -> HttpOnlyCookie : accessToken, encryptedRefreshToken
+            note across:  쿠키가 도메인별로 4096바이트 제한이 있음. accessToken은 대칭암호화 하지 않음. \n왜냐하면, 용량도 아끼고, \n사용 빈도가 잦기 때문에 암복호화 코스트가 들기 때문
+            브라우저 <- 프론트서버: idToken
+            브라우저 -> localStorage : idToken 저장
+        end
+        브라우저 -> RefreshCallbackQueue : RefreshCallbackQueue 조회
+            브라우저 <- RefreshCallbackQueue : RefreshCallbackQueue
+            브라우저 -> 브라우저 : RefreshCallbackQueue 재호출
+    end
+end
+group 리소스 서버 호출 프로세스
+    브라우저 -> 리소스서버 : /api/data 호출 (HttpOnlyCookie)
+    리소스서버 -> HttpOnlyCookie : accessToken조회
+    리소스서버 <- HttpOnlyCookie : accessToken응답
+    alt accessToken이 없을 경우
+        리소스서버 -> 브라우저 : 401. no accessToken
+        note across: RefreshTokenProcess 호출 안함
+'        브라우저 -> 브라우저 : 로그인 프로세스
+    end
+    alt accessToken validate
+         group jwks 공개키 조회
+            리소스서버 -> 리소스서버 : 메모리에서 jwks 공개키 조회
+            alt 공개키 없을 경우 조회 및 캐시
+                리소스서버 -> 통합인증 : jwks 공개키 요청 /realms/{realm-name}/protocol/openid-connect/certs
+                통합인증 -> 리소스서버 : jwks 공개키
+                리소스서버 -> 리소스서버 : jwks 공개키 메모리 저장
+            end
+         end
+         리소스서버 -> 리소스서버 : accessToken jwt 토큰 validate & parsing (accessToken, jwks 공개키)
+         alt accessToken 만료되었을 경우
+            브라우저 <- 리소스서버 : 401. invalid accessToken
+            group jwt 토큰 validate 실패 프로세스 - RefreshToken Process
+                note across: 상단 확인
+            end
+
+         end
+    end
+    브라우저 <- 리소스서버 : /api/data 응답
+end
+group 로그인 프로세스
+    브라우저 -> 통합인증 : /realms/{realm-name}/protocol/openid-connect/auth (code grant, redirectUrl)
+    통합인증 -> 브라우저 : code
+    브라우저 -> 프론트서버 : code
+    프론트서버 -> 프론트서버 : /realms/{realm-name}/protocol/openid-connect/token (code)
+    group 토큰 저장 프로세스
+    note across: 상단 토큰 저장 프로세스
+    end
+end
+group 로그아웃 프로세스
+    브라우저 -> 프론트서버 : 로그아웃처리
+    프론트서버 -> HttpOnlyCookie : 쿠키 제거
+    브라우저 -> localStorage : idToken 제거
+    브라우저 -> 통합인증 : /realms/{realm-name}/protocol/openid-connect/logout
+    note across: 통합인증 로그아웃 처리는 고려해봐야함. SSO에서 쓰이는듯. 안쓰는거라 안해도될지도.
+    브라우저 -> 브라우저 : Home으로 이동
+end
+@enduml

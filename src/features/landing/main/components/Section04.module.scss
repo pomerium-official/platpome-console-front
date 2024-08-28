@@ -1,0 +1,145 @@
+.section04 {
+  position: relative;
+  width: 100%;
+  height: 1240px;
+  padding-top: 160px;
+  background: var(--color-black) url(/assets/images/platpome/bg-section04.png)
+    no-repeat center center;
+  > img {
+    display: block;
+    margin: 0 auto;
+    transform: translate(25px, 0);
+  }
+  :global {
+    .bgs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      > * {
+        position: absolute;
+        left: 50%;
+        opacity: 0;
+      }
+      img {
+        display: block;
+      }
+      .coins {
+        top: 399px;
+        margin-left: -632px;
+      }
+      .wallet01 {
+        top: 549px;
+        margin-left: -515px;
+      }
+      .wallet02 {
+        top: 502px;
+        margin-left: 67px;
+      }
+      .wallet03 {
+        width: 680px;
+        top: 584px;
+        margin-left: -340px;
+        padding-top: 136px;
+        overflow: hidden;
+        .card01 {
+          position: absolute;
+          top: 31px;
+          width: 100%;
+        }
+        .wallet {
+          position: relative;
+        }
+      }
+    }
+    dl {
+      position: relative;
+      margin-bottom: 170px;
+      text-align: center;
+      dt {
+        .gradient {
+          display: block;
+          margin: 0 auto 8px;
+          font-size: 24px;
+          font-weight: 700;
+          opacity: 0;
+        }
+        strong {
+          display: block;
+          font-size: 40px;
+          font-weight: 700;
+          color: var(--color-white);
+          opacity: 0;
+        }
+      }
+      dd {
+        margin-top: 40px;
+        font-size: 20px;
+        span {
+          display: block;
+          opacity: 0;
+        }
+      }
+    }
+  } //:global
+  &:global(.action) {
+    :global {
+      dt {
+        .gradient {
+          animation: fadeIn 0.4s forwards;
+        }
+        strong {
+          animation: fadeIn 0.4s forwards 0.2s;
+        }
+      }
+      .txt01 {
+        animation: fadeIn 0.4s forwards 0.4s;
+      }
+      .txt02 {
+        animation: fadeIn 0.4s forwards 0.6s;
+      }
+      .bgs {
+        .wallet01 {
+          animation: fadeIn 0.4s forwards 0.8s;
+        }
+        .wallet02 {
+          animation: fadeIn 0.4s forwards 1s;
+        }
+        .wallet03 {
+          animation: fadeIn 0.4s forwards 1.2s;
+          .card01 {
+            :local {
+              animation: card-up 0.4s forwards 1.8s;
+            }
+          }
+        }
+        .coins {
+          :local {
+            animation: coins 0.4s forwards 1.4s;
+          }
+        }
+      }
+    } //:global
+  } //&:global(.action)
+}
+
+@keyframes card-up {
+  from {
+    top: 31px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes coins {
+  from {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

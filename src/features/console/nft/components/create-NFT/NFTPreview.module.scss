@@ -1,0 +1,127 @@
+.nftPreviewWrap {
+  width: fit-content;
+  :global {
+    .nftPreview {
+      width: 298px;
+      height: 458px;
+      border-radius: 18px;
+      overflow: hidden;
+      .imgDiv {
+        position: relative;
+        width: 298px;
+        height: 298px;
+        background: var(--color-e6e6e6);
+        .figures {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          height: 29px;
+          padding: 0 12px;
+          border-radius: 99px;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--color-f2f2f2);
+          background: var(--color-191919);
+          &:before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+            background: var(--color-f2f2f2);
+            mask: url(/assets/images/icons/icon-card-multi.svg) no-repeat center
+              center;
+          }
+          &.noNumber {
+            background: var(--font-color);
+          }
+        }
+      }
+      .infoDiv {
+        width: 100%;
+        height: 160px;
+        padding: 16px;
+        background: var(--color-white);
+        .appName {
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration: underline;
+          color: var(--color-121212);
+        }
+        .nftName {
+          margin-top: 8px;
+          color: var(--color-434343);
+          &.noName {
+            width: 200px;
+            height: 14px;
+            border-radius: 2px;
+            background: var(--color-e6e6e6);
+          }
+        }
+        .state {
+          position: relative;
+          margin-top: 16px;
+          .price {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--color-121212);
+            //&.noPrice {
+            //  width: 72px;
+            //  height: 14px;
+            //  border-radius: 2px;
+            //  background: var(--color-e6e6e6);
+            //}
+          }
+          .buyNow {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            padding: 0 12px;
+            border-radius: 30px;
+            color: var(--color-e7d6ff);
+            background: var(--color-f2f2f2);
+          }
+        } //.state
+        .restInfo {
+          display: flex;
+          align-items: center;
+          margin-top: 14px;
+          font-size: 11px;
+          font-weight: 400;
+          color: var(--color-434343);
+          &:before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            margin-right: 4px;
+            background: url(/assets/images/icons/icon-hexagon.svg) no-repeat
+              center center;
+          }
+          &.multi {
+            &.noNumber {
+              width: 72px;
+              height: 14px;
+              border-radius: 2px;
+              background: var(--color-e6e6e6);
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      } //.infoDiv
+    } //.nftPreview
+  } //:global
+  &:global(.multi) {
+    width: 316px;
+    padding: 0 18px 18px 0;
+    background: url(/assets/images/console/bg-nft-card-preview.svg) no-repeat
+      right bottom;
+  }
+}

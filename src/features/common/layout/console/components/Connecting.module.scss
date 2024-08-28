@@ -1,0 +1,27 @@
+.connecting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #404040;
+    mask: url(/assets/images/icons/icon-connecting.svg) no-repeat center center /
+      contain;
+    :local {
+      animation: connecting 0.8s infinite;
+    }
+  }
+}
+
+@keyframes connecting {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,78 @@
+.only-text-button {
+    cursor:pointer;
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: fit-content;
+}
+
+.only-text-button .element {
+    letter-spacing: 0;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.only-text-button.email {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.only-text-button.email {
+    border-color: #934ff7;
+}
+
+.only-text-button.email:hover {
+    border-color: #a167f7;
+}
+
+.only-text-button .usage-email {
+    font-family: "Pretendard-Medium", Helvetica;
+    font-weight: 500;
+}
+
+.only-text-button .fourteen-px {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.only-text-button .usage-link {
+    font-family: "Pretendard-Regular", Helvetica;
+    font-weight: 400;
+}
+
+.only-text-button .sixteen-px {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.only-text-button .usage-button {
+    font-family: "Pretendard-Regular", Helvetica;
+    font-weight: 400;
+}
+
+.only-text-button .usage-link:hover {
+    color: #3100FF;
+}
+
+.only-text-button .usage-email {
+    color: #934ff7;
+}
+
+.only-text-button .usage-email:hover {
+    color: #a167f7;
+}
+
+.only-text-button .usage-button:hover {
+    color: #999999;
+}
+
+.only-text-button .usage-link {
+    color: #3000ff;
+}
+
+.only-text-button .usage-button {
+    color: #e6e6e6;
+}

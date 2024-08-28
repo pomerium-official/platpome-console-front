@@ -1,0 +1,13 @@
+.input{
+    margin-left:5px;
+}
+
+
+.radio:not(:first-child){
+    margin-left:15px;
+}
+
+.radio{
+    margin-bottom: auto;
+    margin-top: auto;
+}

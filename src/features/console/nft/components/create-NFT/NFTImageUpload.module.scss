@@ -1,0 +1,99 @@
+.imageUpload {
+  border-radius: 8px;
+  border: 1.5px dashed var(--color-404040);
+  background: var(--color-black);
+  :global {
+    input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      letter-spacing: 0;
+      opacity: 0;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      &.before {
+        flex-direction: column;
+        p {
+          margin-bottom: 16px;
+          font-size: 16px;
+          font-weight: 500;
+          color: var(--color-666);
+        }
+      }
+      &.after {
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: auto;
+        .imgArea {
+          position: relative;
+          width: 100%;
+          padding: 48px 0;
+          overflow: hidden;
+          .controls {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              left: 12px;
+              width: 24px;
+              height: 24px;
+              border-radius: 99px;
+              box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+              background: var(--color-191919);
+              &:after {
+                content: '';
+                width: 14px;
+                height: 14px;
+                background-color: #fff;
+                mask: url(/assets/images/icons/caret-down.svg) no-repeat center
+                  center / cover;
+                transform: rotate(90deg);
+              }
+              &.next {
+                left: auto;
+                right: 12px;
+                &:after {
+                  transform: rotate(-90deg);
+                }
+              }
+            }
+          }
+        }
+        .close {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          width: 32px;
+          height: 32px;
+          background: var(--color-f2f2f2);
+          mask: url(/assets/images/icons/icon-x.svg) no-repeat center center;
+          mask-size: 20px;
+        }
+        .addSet {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 0 24px 24px;
+          .multiImgCount {
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .p-button {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}

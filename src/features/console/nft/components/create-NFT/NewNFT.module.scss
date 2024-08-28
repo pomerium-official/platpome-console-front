@@ -1,0 +1,184 @@
+.newNftWrap {
+  width: 1100px;
+  :global {
+    .pageTitle {
+      > .right {
+        .addressCopySet {
+          .address {
+            width: fit-content;
+          }
+        }
+      }
+    }
+    .newNftContent {
+      display: flex;
+      > .left {
+        .sectionTitle {
+          margin-top: 56px;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+      > .right {
+        margin-left: auto;
+      }
+      .chooseNftType {
+        display: flex;
+        gap: 16px;
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 33.3333%;
+          height: 180px;
+          padding: 0 16px;
+          border: 1px solid var(--color-404040);
+          border-radius: 8px;
+          &:hover,
+          &.current {
+            border-color: var(--color-f2f2f2);
+          }
+          dl {
+            margin-top: 16px;
+            dt {
+              margin-bottom: 8px;
+              font-size: 16px;
+              font-weight: 600;
+              color: var(--color-f2f2f2);
+            }
+            dd {
+              font-size: 12px;
+              color: var(--color-808080);
+            }
+          }
+          &.multi {
+            border-color: var(--color-262626);
+            background: var(--color-262626);
+            dl {
+              dt {
+                color: var(--color-404040);
+              }
+              dd {
+                color: var(--color-f2f2f2);
+              }
+            }
+          }
+        }
+      } //.chooseNftType
+      .optionItem {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--color-404040);
+        > div:not(.bottom) {
+          display: flex;
+          align-items: center;
+          dl {
+            dt {
+              font-size: 24px;
+              font-weight: 700;
+              color: var(--color-f2f2f2);
+            }
+            dd {
+              font-size: 14px;
+              font-weight: 500;
+              color: var(--color-808080);
+            }
+          }
+          .right {
+            margin-left: auto;
+          }
+        }
+        .bottom {
+          margin-top: 10px;
+          .properties {
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+    .addProperties {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--color-808080);
+      border-radius: 8px;
+      background: url(/assets/images/icons/icon-cross.svg) no-repeat center
+        center;
+      background-size: 20px;
+    }
+    .addedContent {
+      position: relative;
+      margin-top: 80px;
+      .inputWrap {
+        .inputDiv {
+          input {
+            padding-left: 100px;
+          }
+        }
+        .unit {
+          left: 16px;
+          right: auto;
+          font-family: Orbitron;
+        }
+      }
+      .balance {
+        position: absolute;
+        right: 18px;
+        top: 21px;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        &.red {
+          color: var(--color-f53b00);
+        }
+      }
+    }
+    .totalWrap {
+      margin-top: 32px;
+      border-radius: 8px;
+      background: var(--color-262626);
+      .gasFee {
+        display: flex;
+        align-items: center;
+        padding: 18px;
+        &.total {
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            width: calc(100% - 36px);
+            height: 1px;
+            background-color: var(--color-404040);
+          }
+          dd {
+            color: var(--color-934ff7);
+          }
+        }
+        dt {
+          display: flex;
+          align-items: center;
+          .iconBtn {
+            width: 14px;
+            height: 14px;
+            margin-left: 9px;
+            mask-size: 100%;
+          }
+        }
+        dd {
+          margin-left: auto;
+          font-size: 18px;
+          font-weight: 700;
+          color: var(--color-f2f2f2);
+        }
+      }
+    }
+
+    .bottomButtons {
+      margin-top: 64px;
+      text-align: right;
+    }
+  } //:global
+}

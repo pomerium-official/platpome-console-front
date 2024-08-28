@@ -1,0 +1,33 @@
+.keyMaskSet {
+  display: flex;
+  align-items: center;
+  :global {
+    .keyArea {
+      width: 250px;
+      height: 22px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .btn {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-f2f2f2);
+      mask-size: 100%;
+      mask-position: center center;
+      mask-repeat: no-repeat;
+      &.mask {
+        margin-left: 8px;
+        mask-image: url(/assets/images/icons/icon-eye.svg);
+        &.slash {
+          mask-image: url(/assets/images/icons/icon-eye-slash.svg);
+        }
+      }
+      &.copy {
+        margin-left: 16px;
+        mask-image: url(/assets/images/icons/icon-copy.svg);
+      }
+    }
+  }
+}

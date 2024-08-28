@@ -1,0 +1,124 @@
+.p-paginator {
+    color: #F2F2F2;
+}
+
+.p-paginator .p-paginator-next .p-button-icon.p-c.p-paginator-icon,.p-paginator .p-paginator-last .p-button-icon.p-c.p-paginator-icon{
+    transform: rotate(180deg);
+}
+
+.p-paginator .p-paginator-first .p-button-icon.p-c.p-paginator-icon::before,
+.p-paginator .p-paginator-last .p-button-icon.p-c.p-paginator-icon::before
+{
+    content:url("/assets/images/page-first.svg");
+}
+.p-paginator .p-paginator-prev .p-button-icon.p-c.p-paginator-icon::before,
+.p-paginator .p-paginator-next .p-button-icon.p-c.p-paginator-icon::before
+{
+    content:url("/assets/images/page-prev.svg");
+}
+
+.p-paginator .p-paginator-first.p-disabled .p-button-icon.p-c.p-paginator-icon::before,
+.p-paginator .p-paginator-last.p-disabled .p-button-icon.p-c.p-paginator-icon::before
+{
+    content:url("/assets/images/page-first-disabled.svg");
+}
+.p-paginator .p-paginator-prev.p-disabled .p-button-icon.p-c.p-paginator-icon::before,
+.p-paginator .p-paginator-next.p-disabled .p-button-icon.p-c.p-paginator-icon::before
+{
+    content:url("/assets/images/page-prev-disabled.svg");
+}
+
+.p-paginator .p-paginator-first.p-disabled,
+.p-paginator .p-paginator-prev.p-disabled,
+.p-paginator .p-paginator-next.p-disabled,
+.p-paginator .p-paginator-last.p-disabled{
+    background-color: transparent;
+}
+
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+    background-color: transparent;
+    border: 0 none;
+    color: #F2F2F2;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+    transition: box-shadow 0.2s;
+    border-radius: 50%;
+    padding:0;
+}
+
+.p-paginator .p-paginator-first.p-button-icon-only > span.p-button-label.p-c,
+.p-paginator .p-paginator-prev.p-button-icon-only > span.p-button-label.p-c,
+.p-paginator .p-paginator-next.p-button-icon-only > span.p-button-label.p-c,
+.p-paginator .p-paginator-last.p-button-icon-only > span.p-button-label.p-c{
+    display:none;
+}
+
+.p-paginator .p-paginator-first:not(.p-disabled):hover,
+.p-paginator .p-paginator-prev:not(.p-disabled):hover,
+.p-paginator .p-paginator-next:not(.p-disabled):hover,
+.p-paginator .p-paginator-last:not(.p-disabled):hover {
+    border-radius: 50%;
+    background: #333;
+    border-color: transparent;
+    color: #F2F2F2;
+}
+.p-paginator .p-paginator-first {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.p-paginator .p-paginator-last {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.p-paginator .p-dropdown {
+    margin-left: 0.5rem;
+    height: 3rem;
+}
+.p-paginator .p-dropdown .p-dropdown-label {
+    padding-right: 0;
+}
+.p-paginator .p-paginator-page-input {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.p-paginator .p-paginator-page-input .p-inputtext {
+    max-width: 3rem;
+}
+.p-paginator .p-paginator-current {
+    background-color: transparent;
+    border: 0 none;
+    color: #6c757d;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.143rem;
+    padding: 0;
+}
+.p-paginator .p-paginator-pages .p-paginator-page {
+    background-color: transparent;
+    border: 0 none;
+    color: #F2F2F2;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+    transition: box-shadow 0.2s;
+    border-radius: 50%;
+    padding:0;
+
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    color: #934FF7;
+}
+.p-paginator .p-paginator-pages .p-paginator-page:hover {
+    border-radius: 50%;
+    background: #333;
+    border-color: transparent;
+    color: #F2F2F2;
+}

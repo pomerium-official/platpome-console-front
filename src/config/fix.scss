@@ -1,0 +1,86 @@
+html {
+  .p-dropdown-panel {
+    background: #000;
+    margin-top: 8px;
+    border: 1px solid #934ff7;
+    box-shadow: 0 0 10px rgba(151, 71, 255, 0.8);
+    .p-dropdown-items {
+      padding: 10px;
+      .p-dropdown-item {
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-weight: 500;
+        color: #e6e6e6;
+        &.p-highlight {
+          color: #e6e6e6;
+          background: #222;
+        }
+        &:not(.p-highlight):not(.p-disabled):hover {
+          color: #e6e6e6;
+          background: none;
+        }
+        .p-ink {
+          display: none;
+        }
+        .country-item {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          font-size: 14px;
+          .flag {
+            width: 20px;
+            height: 13.5px;
+            margin-right: 5px;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .dialCode {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  } //.p-dropdown-panel
+  .p-tabmenu {
+    margin-bottom: 48px;
+    .p-tabmenu-nav {
+      border-bottom: 1px solid var(--color-404040) !important;
+      background: none;
+      .p-tabmenuitem {
+        &:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link,
+        &.p-highlight .p-menuitem-link,
+        .p-menuitem-link {
+          border-color: transparent;
+          background: none;
+          &:not(.p-disabled):focus {
+            box-shadow: none;
+          }
+          &:has(.figure) {
+            flex-direction: row-reverse;
+          }
+          .figure {
+            display: flex;
+            align-items: center;
+            height: 18px;
+            padding: 0 6px;
+            margin-left: 6px;
+            border-radius: 99px;
+            font-size: 12px;
+            color: var(--color-191919);
+            background: var(--font-color);
+          }
+          .p-menuitem-text {
+            color: var(--font-color);
+          }
+        }
+        &.p-highlight {
+          .p-menuitem-link {
+            .figure {
+              background: var(--main-gradient);
+            }
+          }
+        }
+      }
+    }
+  } //.p-tabmenu
+} //html

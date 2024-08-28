@@ -1,0 +1,33 @@
+.displayItem {
+  position: relative;
+  width: fit-content;
+  height: 200px;
+  :global {
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+      // max-width: 100%;
+      margin: 0 auto;
+    }
+    .delete {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 24px;
+      height: 24px;
+      border-radius: 99px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      background: #f53b00;
+    }
+    .delete:after {
+      content: '';
+      width: 10px;
+      height: 1px;
+      background: #fff;
+    }
+  }
+}

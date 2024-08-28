@@ -1,0 +1,43 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_734_17714)">
+<rect width="100" height="100" rx="50" fill="white"/>
+<g clip-path="url(#clip1_734_17714)">
+<mask id="mask0_734_17714" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+<path d="M100 0H0V100H100V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_734_17714)">
+<path d="M100 0H0V100H100V0Z" fill="white"/>
+<path d="M100.05 0H0.0498047V100H100.05V0Z" fill="url(#paint0_linear_734_17714)"/>
+<path d="M100.05 0H0.0498047V100H100.05V0Z" fill="url(#paint1_linear_734_17714)"/>
+<path d="M100.05 0H0.0498047V100H100.05V0Z" fill="url(#paint2_linear_734_17714)"/>
+<path d="M100.05 0H0.0498047V100H100.05V0Z" fill="url(#paint3_linear_734_17714)"/>
+</g>
+</g>
+<path d="M35.6475 67.2999V30.209H41.2438V47.9214H41.6966L57.2537 30.209H64.2988L49.3393 46.9072L64.3532 67.2999H57.6159L45.6266 50.7285L41.2438 55.7633V67.2999H35.6475Z" fill="#29293E"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_734_17714" x1="82.4498" y1="6.95" x2="26.1498" y2="100" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF6866"/>
+<stop offset="0.510417" stop-color="#FF908B"/>
+<stop offset="1" stop-color="#FF9680"/>
+</linearGradient>
+<linearGradient id="paint1_linear_734_17714" x1="9.0498" y1="94" x2="32.2998" y2="69.7" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA794"/>
+<stop offset="0.963542" stop-color="#FF9480" stop-opacity="0.26"/>
+</linearGradient>
+<linearGradient id="paint2_linear_734_17714" x1="53.9998" y1="19" x2="100.1" y2="75.1" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F8FCD9" stop-opacity="0"/>
+<stop offset="1" stop-color="#F8FCD9"/>
+</linearGradient>
+<linearGradient id="paint3_linear_734_17714" x1="71.1998" y1="4.55" x2="53.2998" y2="64" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF6B6B"/>
+<stop offset="1" stop-color="#FF8F8F" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_734_17714">
+<rect width="100" height="100" rx="50" fill="white"/>
+</clipPath>
+<clipPath id="clip1_734_17714">
+<rect width="100" height="100" fill="white"/>
+</clipPath>
+</defs>
+</svg>

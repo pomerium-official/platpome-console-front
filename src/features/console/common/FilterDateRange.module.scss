@@ -1,0 +1,61 @@
+.filterDateRange {
+  :global {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      button {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        padding: 0 16px;
+        border-radius: 8px;
+        color: var(--color-f2f2f2);
+        background-color: var(--color-262626);
+        &.checked {
+          color: var(--color-191919) !important;
+          background-color: var(--color-f2f2f2) !important;
+        }
+      }
+    }
+    .customSet {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 45px;
+      margin-top: 16px;
+      border: 1px solid var(--color-808080);
+      border-radius: 8px;
+      .dash {
+        color: var(--color-666);
+      }
+      .inputWrap {
+        label {
+          input {
+            height: 45px;
+            padding-left: 35px;
+            border: 0 !important;
+            box-shadow: none !important;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 14px;
+            width: 14px;
+            height: 14px;
+            background: var(--color-f2f2f2);
+            mask: url(/assets/images/icons/icon-calendar.svg);
+            mask-size: 100%;
+          }
+          &:after {
+            display: none;
+          }
+        }
+        .calendarWrap {
+          top: 55px;
+        }
+      }
+    }
+  }
+}

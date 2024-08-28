@@ -1,0 +1,79 @@
+.logos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 100%;
+  height: 120px;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc((100% - 1100px) / 2);
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+      90deg,
+      #191919 0%,
+      #191919 50%,
+      rgba(25, 25, 25, 0) 100%
+    );
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc((100% - 1100px) / 2);
+    height: 100%;
+    background: linear-gradient(
+      -90deg,
+      #191919 0%,
+      #191919 50%,
+      rgba(25, 25, 25, 0) 100%
+    );
+  }
+  ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // gap: 80px;
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+    :local {
+      animation: flow 20s infinite linear;
+    }
+    li {
+      margin-right: 80px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  :global {
+    .rail {
+      display: flex;
+      width: 100vw;
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes flow {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100%, 0);
+  }
+}

@@ -1,0 +1,47 @@
+.addressCopySet {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 37px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 400;
+  background: linear-gradient(315deg, #cecece 0%, #fff 100%);
+  :global {
+    .name {
+      display: flex;
+      align-items: center;
+      font-family: Orbitron;
+      font-size: 12px;
+      font-weight: 600;
+      color: #262626;
+      img {
+        width: 12px;
+        margin-right: 6px;
+      }
+    }
+    .address {
+      width: 90px;
+      margin: 0 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      color: #4d4d4d;
+    }
+    .iconBtn {
+      background: #4d4d4d;
+    }
+  } //:global
+  &:global(.console) {
+    background: var(--main-gradient);
+    :global {
+      .address {
+        color: #fff;
+      }
+      .iconBtn {
+        background: #fff;
+        mask-size: 100%;
+      }
+    }
+  }
+}

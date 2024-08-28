@@ -1,0 +1,38 @@
+.wrapper{
+    /*background-color: #a86de7;*/
+}
+
+.item{
+    /*width:50px;*/
+    display: inline-block;
+    margin:0;
+    padding: 0;
+    vertical-align: middle;
+}
+.item:not(:first-child){
+    margin-left:10px;
+}
+
+.thumbnailContainer{
+    position:relative;
+    width:auto;
+}
+.thumbnailDelete{
+    position:absolute;
+    right:0;
+    top:0;
+    height:25px;
+    width:25px;
+    background: rgba(211, 211, 211, 0.48);
+    cursor: pointer;
+}
+.thumbnailDelete:hover{
+    background:rgba(211, 211, 211, 0.8);
+}
+.thumbnail{
+    display:block;
+}
+
+.wrapper .addButton{
+    font-size:30px;
+}

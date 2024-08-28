@@ -1,0 +1,44 @@
+.loadingFullLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 1);
+  &:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url(/assets/images/console/loading-x01.svg) no-repeat center
+      center / contain;
+    :local {
+      animation: change 1s infinite;
+    }
+  }
+}
+
+@keyframes change {
+  0% {
+    background-image: url(/assets/images/console/loading-x01.svg);
+  }
+  20% {
+    background-image: url(/assets/images/console/loading-x02.svg);
+  }
+  40% {
+    background-image: url(/assets/images/console/loading-x03.svg);
+  }
+  60% {
+    background-image: url(/assets/images/console/loading-x04.svg);
+  }
+  80% {
+    background-image: url(/assets/images/console/loading-x05.svg);
+  }
+  100% {
+    background-image: url(/assets/images/console/loading-x06.svg);
+  }
+}

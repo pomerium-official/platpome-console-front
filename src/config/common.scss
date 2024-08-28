@@ -1,0 +1,239 @@
+.iconBtn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-f2f2f2);
+  &.search {
+    mask: url(/assets/images/icons/icon-lens.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+  &.filter {
+    mask: url(/assets/images/icons/icon-filter.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+  &.copy {
+    mask: url(/assets/images/icons/icon-copy.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+  &.infoInSquare {
+    mask: url(/assets/images/icons/icon-info-in-square.svg) no-repeat center
+      center;
+    mask-size: 20px;
+  }
+  &.trash {
+    mask: url(/assets/images/icons/icon-trash.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+  &.pencil {
+    mask: url(/assets/images/icons/icon-pencil.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+  &.successFill {
+    background: #4ef500;
+    mask: url(/assets/images/icons/icon-success-fill.svg) no-repeat center
+      center;
+    mask-size: 20px;
+  }
+  &.report {
+    mask: url(/assets/images/icons/icon-report.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+  &.cross {
+    mask: url(/assets/images/icons/icon-cross.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+  &.back {
+    mask: url(/assets/images/icons/icon-larr.svg) no-repeat center center;
+    mask-size: 20px;
+  }
+}
+
+.walletOptionTemplete {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 39px;
+  font-size: 12px;
+  .name {
+    display: flex;
+    align-items: center;
+    font-family: Orbitron;
+    img:not(.console) {
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+    }
+  }
+  .address {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    font-weight: 400;
+    color: var(--font-color);
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin-right: 4px;
+      background: url(/assets/images/icons/icon-wallet-fill.svg) no-repeat
+        center center;
+      background-size: cover;
+    }
+  }
+  .connect {
+    display: flex;
+    align-items: center;
+    height: 39px;
+    // padding: 0 8px;
+    font-size: 15px;
+    font-weight: 500;
+    &:before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      background: url(/assets/images/icons/icon-cross-in-circle.svg) no-repeat
+        center center;
+      background-size: cover;
+    }
+  }
+  &.selected {
+    .address {
+      color: var(--color-f2f2f2);
+    }
+    .connect {
+      display: none;
+    }
+  }
+}
+
+.select.walletSelect {
+  .p-dropdown {
+    .p-placeholder {
+      color: var(--color-808080);
+    }
+  }
+}
+
+.toastWrap {
+  position: fixed;
+  right: 40px;
+  top: 100px;
+  .toast {
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+    padding: 16px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-404040);
+    border-radius: 8px;
+    background: rgba(51, 51, 51, 0.8);
+    backdrop-filter: blur(2px);
+    animation: toast 3s forwards;
+  }
+}
+
+@keyframes toast {
+  0% {
+    margin-top: 100px;
+    opacity: 0;
+  }
+  20% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  90% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-top: -40px;
+    opacity: 0;
+  }
+}
+
+.rowTable {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  border-spacing: 0;
+  border-collapse: collapse;
+  th,
+  td {
+    padding: 12px 0;
+  }
+  th {
+    vertical-align: top;
+    text-align: left;
+    font-weight: 500;
+  }
+  td {
+    padding: 12px;
+    color: var(--color-f2f2f2);
+  }
+  &.line {
+    th,
+    td {
+      border: 1px solid var(--color-404040);
+    }
+    th {
+      border-left: 0;
+    }
+    td {
+      border-right: 0;
+    }
+  }
+}
+
+.labelName {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ccc);
+}
+
+.tokenOptionTemplete {
+  width: 100%;
+  dl {
+    display: flex;
+    align-items: center;
+    dt {
+      display: flex;
+      align-items: center;
+      font-family: Orbitron;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-f2f2f2);
+      .symbolImg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+    }
+    dd {
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-f2f2f2);
+    }
+  }
+}
+
+html {
+  .p-dropdown-panel {
+    overflow: hidden;
+    &.tokenOption {
+      .p-dropdown-items {
+        padding: 0;
+        .p-dropdown-item {
+          padding: 18px;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

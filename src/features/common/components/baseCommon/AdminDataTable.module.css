@@ -1,0 +1,10 @@
+.horizontalScroll :global table{
+    table-layout: auto;
+}
+
+.horizontalScroll :global table th,.horizontalScroll :global table td{
+    white-space: nowrap;
+}
+.horizontalScroll :global .p-datatable-wrapper{
+    overflow-x:auto;
+}

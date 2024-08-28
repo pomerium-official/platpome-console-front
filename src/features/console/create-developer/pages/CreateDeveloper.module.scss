@@ -1,0 +1,104 @@
+.createDeveloperContent {
+  display: flex;
+  gap: 20px;
+  width: 1100px;
+  :global {
+    .leftSite {
+      width: 625px;
+      padding-top: 22px;
+      .email {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 12px;
+        margin-bottom: 16px;
+        border: 1px solid var(--color-f2f2f2);
+        border-radius: 99px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-f2f2f2);
+        > i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+          font-size: 12px;
+          color: #29293e;
+          background: url(/assets/images/icons/icon-email-deco.svg) no-repeat
+            center center;
+          background-size: contain;
+        }
+      }
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--color-f2f2f2);
+      }
+      p {
+        margin-top: 8px;
+        color: var(--color-808080);
+      }
+      .bgDiv {
+        margin-top: 40px;
+        width: 100%;
+        height: 304px;
+        background: url(/assets/images/console/bg-create-developer.gif);
+        background-size: cover;
+      }
+    } //.leftSite
+    .rightSite {
+      // width: 540px;
+      h1 {
+        margin-bottom: 40px;
+        font-size: 28px;
+        font-weight: 600;
+        color: var(--color-f2f2f2);
+      }
+      > .inputWrap,
+      .verificationSet {
+        width: 400px;
+      }
+      > .inputWrap {
+        margin-bottom: 12px;
+      }
+      .agreeList {
+        width: 400px;
+        margin-top: 24px;
+        li {
+          display: flex;
+          width: 100%;
+          margin-top: 4px;
+          &:first-child {
+            margin-top: 0;
+          }
+          .p-checkbox {
+            margin: 3px 8px 0 0;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: var(--color-white);
+            a {
+              color: var(--color-3100ff);
+              &:hover {
+                color: #5a33ff;
+              }
+            }
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 32px;
+        .p-button {
+          width: 400px;
+        }
+      }
+    } //.rightSite
+  } //:global
+}

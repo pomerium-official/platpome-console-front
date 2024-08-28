@@ -1,0 +1,25 @@
+.testnetAlert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #ffca8d;
+  p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: #f21d00;
+    &:before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      background: #f21d00;
+      mask: url(/assets/images/icons/icon-exclamation-in-red-circle.svg)
+        no-repeat center center / contain;
+    }
+  }
+}

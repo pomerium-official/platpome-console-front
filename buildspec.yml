@@ -1,0 +1,25 @@
+version: 0.2
+env:
+  variables:
+    NODE_ENV: "production"
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 110981211827.dkr.ecr.ap-northeast-2.amazonaws.com
+  build:
+    commands:
+      - echo Building the Docker image...
+      - |
+        sed -i "s|\"Name\": \".*\"|\"Name\": \"110981211827.dkr.ecr.ap-northeast-2.amazonaws.com/pomeriumx/console-front:${CODEBUILD_RESOLVED_SOURCE_VERSION}\"|" Dockerrun.aws.json
+      - docker build -t pomeriumx/console-front . --build-arg BUILD_ENV=production
+      - docker tag pomeriumx/console-front:latest 110981211827.dkr.ecr.ap-northeast-2.amazonaws.com/pomeriumx/console-front:${CODEBUILD_RESOLVED_SOURCE_VERSION}
+  post_build:
+    commands:
+      - echo Pushing the Docker image...
+      - docker push 110981211827.dkr.ecr.ap-northeast-2.amazonaws.com/pomeriumx/console-front:${CODEBUILD_RESOLVED_SOURCE_VERSION}
+artifacts:
+  files:
+    - Dockerrun.aws.json
+    - .platform/**/*

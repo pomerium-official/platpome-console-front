@@ -1,0 +1,9 @@
+.sliderWrap{position:relative;width:100%; padding:5px 0}
+
+.steps{position:relative; width:100%; margin-top:12px; padding-bottom:30px}
+.steps:after{content:''; display:block; clear:both}
+.steps span{position:absolute}
+.steps span:first-child{left:0 !important}
+.steps span:last-child{left:100% !important}
+
+.steps span i{display:inline-block; width:100px; margin-left:-50px; text-align:center; font-style:normal}

@@ -1,0 +1,62 @@
+.verificationSet {
+  width: 100%;
+  :global {
+    .pro {
+      display: flex;
+      gap: 4px;
+      .country {
+        width: 150px;
+        .p-dropdown-label {
+          padding-right: 0;
+          .country-item {
+            &-value {
+              display: flex;
+              flex: 1;
+              align-items: center;
+              div {
+                margin-left: auto;
+              }
+            }
+          }
+        }
+      }
+      .inputWrapper {
+        flex: 1;
+        position: relative;
+        .send {
+          position: absolute;
+          right: 18px;
+          top: 14.5px;
+        }
+      }
+    }
+    .epi {
+      position: relative;
+      width: 100%;
+      .inputWrapper {
+        position: relative;
+        width: 100%;
+        margin-top: 12px;
+        .access {
+          position: absolute;
+          right: 18px;
+          top: 14.5px;
+        }
+      }
+      .timer {
+        position: absolute;
+        top: 61px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        p {
+          margin: 0 8px 0 0;
+          padding: 0;
+        }
+        strong {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

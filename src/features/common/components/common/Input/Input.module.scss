@@ -1,0 +1,382 @@
+.inputWrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  label {
+    display: block;
+    position: relative;
+    width: 100%;
+    input,
+    textarea {
+      width: 100%;
+      height: 57px;
+      padding: 0 18px;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      color: var(--color-f2f2f2);
+      background: var(--color-black);
+      &::placeholder {
+        color: var(--color-808080);
+      }
+      &:disabled {
+        background: var(--color-333);
+        border-color: var(--color-262626);
+        color: var(--color-262626);
+        &::placeholder {
+          color: var(--color-262626);
+        }
+      }
+    }
+    textarea {
+      display: block;
+      min-height: 57px;
+      max-height: 246px;
+      padding: 18px 18px 17px;
+      border-color: var(--color-404040);
+      &:focus {
+        border-color: #934ff7;
+        :local {
+          animation: breath 2s infinite;
+        }
+      }
+    }
+    :global {
+      .inputDiv {
+        position: relative;
+        .clear {
+          position: absolute;
+          right: 18px;
+          top: 18px;
+          width: 20px;
+          height: 20px;
+          background-color: var(--color-f2f2f2);
+          mask: url(/assets/images/icons/icon-x.svg) no-repeat center center /
+            18px;
+        }
+      }
+      .label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: var(--color-ccc);
+      }
+      .fileDiv {
+        display: flex;
+        position: relative;
+        width: 100%;
+        input[type='file'] {
+          position: absolute;
+          width: 0;
+          height: 0;
+          padding: 0;
+          margin: 0;
+          border: 0;
+          letter-spacing: 0;
+          line-height: 0;
+          overflow: hidden;
+        }
+        .imgDiv {
+          width: 80px;
+          height: 80px;
+          border-radius: 8px;
+          margin-right: 12px;
+          background: var(--color-404040)
+            url(/assets/images/icons/icon-no-img.svg) no-repeat center center;
+        }
+        .rightDiv {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          p {
+            // margin-top: auto;
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--color-808080);
+          }
+        }
+      }
+    }
+  }
+  &:global(.error) {
+    input {
+      border-color: #f53b00;
+    }
+
+  }
+  &:global(.success) {
+    input {
+      border-color: #42f500;
+    }
+  }
+
+  &:global(:not(.error):not(.success)) {
+    input {
+      border: 1px solid var(--color-404040);
+      &:focus {
+        border-color: #934ff7;
+        :local {
+          animation: breath 2s infinite;
+        }
+      }
+    }
+    // &:global(.hasValue) {
+    //   input {
+    //     border-color: #934ff7;
+    //   }
+    // }
+  }
+  &:global(.date) {
+    label {
+      &:after {
+        content: '';
+        position: absolute;
+        right: 18px;
+        bottom: 22px;
+        width: 16px;
+        height: 16px;
+        background: var(--color-white);
+        mask: url(/assets/images/icons/caret-down.svg);
+        mask-size: 100%;
+      }
+    }
+  }
+  :global {
+    .calendarWrap {
+      position: absolute;
+      left: 0;
+      top: 90px;
+      z-index: 2;
+      width: 264px;
+    }
+    .react-calendar {
+      width: 264px;
+      border: 1px solid #934ff7;
+      border-radius: 8px;
+      font-size: 14px;
+      box-shadow: 0 0 10px rgba(151, 71, 255, 0.8);
+      color: var(--color-f2f2f2);
+      background: #000;
+      button {
+        font-size: 14px;
+        color: var(--color-f2f2f2);
+        &:enabled {
+          &:hover,
+          &:focus {
+            background: #000;
+          }
+        }
+      }
+      abbr {
+        text-decoration: none;
+      }
+      .react-calendar__navigation__arrow {
+        min-width: 30px;
+        border-radius: 100%;
+      }
+      .react-calendar__navigation__label {
+        &:disabled {
+          background: #000;
+        }
+        &__labelText {
+          white-space: nowrap;
+        }
+      }
+      &__viewContainer {
+        padding: 0 20px 24px;
+        .react-calendar__month-view__weekdays__weekday {
+          padding-left: 0;
+          padding-right: 0;
+          font-weight: 300;
+        }
+        .react-calendar__month-view__weekdays {
+          border-bottom: 1px solid #404040;
+        }
+        .react-calendar__month-view__days__day--neighboringMonth {
+          color: #404040;
+        }
+        .react-calendar__tile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 32px;
+          border-radius: 100%;
+          &--now,
+          &--now:hover {
+            background: #934ff7 !important;
+          }
+        }
+      }
+    }
+  }
+  &:global(.integral) {
+    :global {
+      .calendarWrap {
+        top: 65px;
+      }
+      label {
+        .label {
+          position: absolute;
+          left: 18px;
+          top: 50%;
+          margin: 0;
+          transform: translate(0, -50%);
+          transition-duration: 0.2s;
+          z-index: 1;
+          color: var(--color-808080);
+        }
+        input {
+          font-size: 12px;
+          padding-top: 25px;
+        }
+      }
+    }
+    &:global(.active) {
+      :global {
+        label {
+          .label {
+            top: 9px;
+            font-size: 12px;
+            transform: none;
+            transition: all 0.2s;
+            color: #808080;
+          }
+        }
+      }
+      &:global(.focus) {
+        :global {
+          label {
+            .label {
+              color: #934ff7;
+            }
+          }
+        }
+      }
+      &:global(.error) {
+        :global {
+          label {
+            .label {
+              color: #f53b00;
+            }
+          }
+        }
+      }
+      &:global(.success) {
+        :global {
+          label {
+            .label {
+              color: #42f500;
+            }
+          }
+        }
+      }
+    }
+    :global {
+      .react-calendar {
+        top: 65px;
+      }
+    }
+    &:global(.bottom) {
+      :global {
+        .react-calendar {
+          top: auto;
+          bottom: calc(100% + 10px);
+        }
+      }
+    }
+  }
+  &:global(.bottom) {
+    :global {
+      .react-calendar {
+        top: auto;
+        bottom: calc(100% - 20px);
+      }
+    }
+  }
+  :global {
+    .pi {
+      &:before {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: #fff;
+      }
+      &.pi-eye {
+        &:before {
+          mask: url(/assets/images/icons/icon-eye.svg) no-repeat center center /
+            100%;
+        }
+        &-slash {
+          &:before {
+            mask: url(/assets/images/icons/icon-eye-slash.svg) no-repeat center
+              center / 100%;
+          }
+        }
+      }
+    }
+  }
+  &:global(.price) {
+    label {
+      input {
+        padding-right: 90px;
+      }
+    }
+    :global {
+      .unit {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 16px;
+        top: 18px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-f2f2f2);
+        .symbol {
+          display: block;
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  :global{
+    .p-password{
+      width: 100%;
+
+      .pi.pi-eye, .pi.pi-eye-slash{
+        right: 18px;
+      }
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 9999s ease-out;
+    -webkit-box-shadow: 0 0 0 1000px #000 inset !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+} //inputWrap
+
+@keyframes breath {
+  0% {
+    box-shadow: 0 0 10px rgba(151, 71, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(151, 71, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(151, 71, 255, 0);
+  }
+}

@@ -1,0 +1,484 @@
+.basic-tag {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  height: 20px;
+  padding: 4px 8px;
+  position: relative;
+  width: fit-content;
+}
+
+.basic-tag .frame {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  position: relative;
+  width: fit-content;
+}
+
+.basic-tag .ellipse {
+  border-radius: 3px;
+  height: 6px;
+  min-width: 6px;
+  position: relative;
+}
+
+.basic-tag .label {
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 12px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.basic-tag:global(.off) {
+  border: 0px none;
+}
+
+.basic-tag:global(.PP) {
+  background-color: #6673eb4c;
+}
+
+.basic-tag:global(.l-YL) {
+  background-color: #f8e0954c;
+}
+
+.basic-tag:global(.l-bl2) {
+  background-color: #bcdcfc4c;
+}
+
+.basic-tag:global(.warning) {
+  background-color: #f5b0004c;
+}
+
+.basic-tag:global(.bl3) {
+  background-color: #508ff24c;
+}
+
+.basic-tag:global(.l-GR) {
+  background-color: #bbedc94c;
+}
+
+.basic-tag:global(.l-BL) {
+  background-color: #c3e5fb4c;
+}
+
+.basic-tag:global(.PK) {
+  background-color: #d54daf4c;
+}
+
+.basic-tag:global(.GR) {
+  background-color: #57af714c;
+}
+
+.basic-tag:global(.YL) {
+  background-color: #e795384c;
+}
+
+.basic-tag:global(.info) {
+  background-color: #007ff54c;
+}
+
+.basic-tag:global(.l-gray) {
+  background-color: #d8d8d84c;
+}
+
+.basic-tag:global(.on) {
+  border: 1px solid;
+}
+
+.basic-tag:global(.error) {
+  background-color: #f53a004c;
+}
+
+.basic-tag:global(.round) {
+  border-radius: 10px;
+}
+
+.basic-tag:global(.l-PK) {
+  background-color: #f4d0ec4c;
+}
+
+.basic-tag:global(.bl2) {
+  background-color: #4397e34c;
+}
+
+.basic-tag:global(.square) {
+  border-radius: 4px;
+}
+
+.basic-tag:global(.l-NV) {
+  background-color: #d6d9e94c;
+}
+
+.basic-tag:global(.l-RD) {
+  background-color: #f5cfca4c;
+}
+
+.basic-tag:global(.l-PP) {
+  background-color: #d9d6fb4c;
+}
+
+.basic-tag:global(.l-VL) {
+  background-color: #e6d8fb4c;
+}
+
+.basic-tag:global(.OR) {
+  background-color: #dc70374c;
+}
+
+.basic-tag:global(.success) {
+  background-color: #4ef5004c;
+}
+
+.basic-tag:global(.VL) {
+  background-color: #987ae64c;
+}
+
+.basic-tag:global(.BL) {
+  background-color: #50a3e64c;
+}
+
+.basic-tag:global(.NV) {
+  background-color: #515ba14c;
+}
+
+.basic-tag:global(.RD) {
+  background-color: #db52424c;
+}
+
+.basic-tag:global(.l-bl3) {
+  background-color: #cad7fb4c;
+}
+
+.basic-tag:global(.l-OR) {
+  background-color: #f3dcb44c;
+}
+
+.basic-tag:global(.on.l-VL) {
+  border-color: #e6d8fb;
+}
+
+.basic-tag:global(.on.l-OR) {
+  border-color: #f3dcb4;
+}
+
+.basic-tag:global(.on.l-GR) {
+  border-color: #bbedc9;
+}
+
+.basic-tag:global(.on.YL) {
+  border-color: #e79538;
+}
+
+.basic-tag:global(.on.GR) {
+  border-color: #57af71;
+}
+
+.basic-tag:global(.on.bl2) {
+  border-color: #4397e3;
+}
+
+.basic-tag:global(.on.OR) {
+  border-color: #dc7037;
+}
+
+.basic-tag:global(.on.BL) {
+  border-color: #50a3e6;
+}
+
+.basic-tag:global(.on.info) {
+  border-color: #007ff5;
+}
+
+.basic-tag:global(.on.l-gray) {
+  border-color: #d8d8d8;
+}
+
+.basic-tag:global(.on.error) {
+  border-color: #f53a00;
+}
+
+.basic-tag:global(.on.VL) {
+  border-color: #987ae6;
+}
+
+.basic-tag:global(.on.success) {
+  border-color: #4ef500;
+}
+
+.basic-tag:global(.on.l-bl2) {
+  border-color: #bcdcfc;
+}
+
+.basic-tag:global(.on.l-YL) {
+  border-color: #f8e095;
+}
+
+.basic-tag:global(.on.l-PK) {
+  border-color: #f4d0ec;
+}
+
+.basic-tag:global(.bl3.on) {
+  border-color: #508ff2;
+}
+
+.basic-tag:global(.RD.on) {
+  border-color: #db5242;
+}
+
+.basic-tag:global(.PK.on) {
+  border-color: #d54daf;
+}
+
+.basic-tag:global(.on.l-bl3) {
+  border-color: #cad7fb;
+}
+
+.basic-tag:global(.on.PP) {
+  border-color: #755def;
+}
+
+.basic-tag:global(.on.l-BL) {
+  border-color: #c3e5fb;
+}
+
+.basic-tag:global(.on.warning) {
+  border-color: #f5b000;
+}
+
+.basic-tag:global(.l-NV.on) {
+  border-color: #d6d9e9;
+}
+
+.basic-tag:global(.on.l-PP) {
+  border-color: #d9d6fb;
+}
+
+.basic-tag:global(.on.NV) {
+  border-color: #515ba1;
+}
+
+.basic-tag:global(.on.l-RD) {
+  border-color: #f5cfca;
+}
+
+.basic-tag:global(.PP) .ellipse {
+  background-color: #6673eb;
+}
+
+.basic-tag:global(.l-YL) .ellipse {
+  background-color: #f8e095;
+}
+
+.basic-tag:global(.l-bl2) .ellipse {
+  background-color: #bcdcfc;
+}
+
+.basic-tag:global(.warning) .ellipse {
+  background-color: #f5b000;
+}
+
+.basic-tag:global(.bl3) .ellipse {
+  background-color: #508ff2;
+}
+
+.basic-tag:global(.l-GR) .ellipse {
+  background-color: #bbedc9;
+}
+
+.basic-tag:global(.l-BL) .ellipse {
+  background-color: #c3e5fb;
+}
+
+.basic-tag:global(.PK) .ellipse {
+  background-color: #d54daf;
+}
+
+.basic-tag:global(.GR) .ellipse {
+  background-color: #57af71;
+}
+
+.basic-tag:global(.YL) .ellipse {
+  background-color: #e79538;
+}
+
+.basic-tag:global(.info) .ellipse {
+  background-color: #007ff5;
+}
+
+.basic-tag:global(.l-gray) .ellipse {
+  background-color: #d8d8d8;
+}
+
+.basic-tag:global(.error) .ellipse {
+  background-color: #f53a00;
+}
+
+.basic-tag:global(.l-PK) .ellipse {
+  background-color: #f4d0ec;
+}
+
+.basic-tag:global(.bl2) .ellipse {
+  background-color: #4397e3;
+}
+
+.basic-tag:global(.l-NV) .ellipse {
+  background-color: #d6d9e9;
+}
+
+.basic-tag:global(.l-RD) .ellipse {
+  background-color: #f5cfca;
+}
+
+.basic-tag:global(.l-PP) .ellipse {
+  background-color: #d9d6fb;
+}
+
+.basic-tag:global(.l-VL) .ellipse {
+  background-color: #e6d8fb;
+}
+
+.basic-tag:global(.OR) .ellipse {
+  background-color: #dc7037;
+}
+
+.basic-tag:global(.success) .ellipse {
+  background-color: #4ef500;
+}
+
+.basic-tag:global(.VL) .ellipse {
+  background-color: #987ae6;
+}
+
+.basic-tag:global(.BL) .ellipse {
+  background-color: #50a3e6;
+}
+
+.basic-tag:global(.NV) .ellipse {
+  background-color: #515ba1;
+}
+
+.basic-tag:global(.RD) .ellipse {
+  background-color: #db5242;
+}
+
+.basic-tag:global(.l-bl3) .ellipse {
+  background-color: #cad7fb;
+}
+
+.basic-tag:global(.l-OR) .ellipse {
+  background-color: #f3dcb4;
+}
+
+.basic-tag:global(.PP) .label {
+  color: #6673eb;
+}
+
+.basic-tag:global(.l-YL) .label {
+  color: #f8e095;
+}
+
+.basic-tag:global(.l-bl2) .label {
+  color: #bcdcfc;
+}
+
+.basic-tag:global(.warning) .label {
+  color: #f5b000;
+}
+
+.basic-tag:global(.bl3) .label {
+  color: #508ff2;
+}
+
+.basic-tag:global(.l-GR) .label {
+  color: #bbedc9;
+}
+
+.basic-tag:global(.l-BL) .label {
+  color: #c3e5fb;
+}
+
+.basic-tag:global(.PK) .label {
+  color: #d54daf;
+}
+
+.basic-tag:global(.GR) .label {
+  color: #57af71;
+}
+
+.basic-tag:global(.YL) .label {
+  color: #e79538;
+}
+
+.basic-tag:global(.info) .label {
+  color: #007ff5;
+}
+
+.basic-tag:global(.l-gray) .label {
+  color: #d8d8d8;
+}
+
+.basic-tag:global(.error) .label {
+  color: #f53a00;
+}
+
+.basic-tag:global(.l-PK) .label {
+  color: #f4d0ec;
+}
+
+.basic-tag:global(.bl2) .label {
+  color: #4397e3;
+}
+
+.basic-tag:global(.l-NV) .label {
+  color: #d6d9e9;
+}
+
+.basic-tag:global(.l-RD) .label {
+  color: #f5cfca;
+}
+
+.basic-tag:global(.l-PP) .label {
+  color: #d9d6fb;
+}
+
+.basic-tag:global(.l-VL) .label {
+  color: #e6d8fb;
+}
+
+.basic-tag:global(.OR) .label {
+  color: #dc7037;
+}
+
+.basic-tag:global(.success) .label {
+  color: #4ef500;
+}
+
+.basic-tag:global(.VL) .label {
+  color: #987ae6;
+}
+
+.basic-tag:global(.BL) .label {
+  color: #50a3e6;
+}
+
+.basic-tag:global(.NV) .label {
+  color: #515ba1;
+}
+
+.basic-tag:global(.RD) .label {
+  color: #db5242;
+}
+
+.basic-tag:global(.l-bl3) .label {
+  color: #cad7fb;
+}
+
+.basic-tag:global(.l-OR) .label {
+  color: #f3dcb4;
+}

@@ -1,0 +1,28 @@
+.cardSection {
+  width: 600px;
+  padding: 24px;
+  border-radius: 8px;
+  background: var(--color-black);
+  :global {
+    .sectionHeader {
+      display: flex;
+      align-items: center;
+      .sectionTitle {
+        margin: 0;
+      }
+      .headerRight {
+        margin-left: auto;
+      }
+    }
+    .sectionBody {
+      padding-top: 40px;
+    }
+    .sectionFooter {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 48px 0 0;
+    }
+  }
+}

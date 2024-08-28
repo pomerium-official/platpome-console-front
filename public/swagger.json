@@ -1,0 +1,38 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {},
+		"securitySchemes": {
+			"basic": {
+				"type": "http",
+				"scheme": "basic"
+			},
+			"token": {
+				"type": "apiKey",
+				"name": "Authorization",
+				"in": "header"
+			},
+			"cookie": {
+				"type": "apiKey",
+				"name": "sess1",
+				"in": "cookie"
+			}
+		}
+	},
+	"info": {
+		"title": "base-template-frontend",
+		"version": "0.0.1",
+		"contact": {}
+	},
+	"openapi": "3.0.0",
+	"paths": {},
+	"servers": [
+		{
+			"url": "/server"
+		}
+	]
+}
