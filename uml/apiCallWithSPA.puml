@@ -1,9 +1,0 @@
-@startuml
-title SPA 호출
-
-actor Browser
-Browser -> LoginServer: 로그인 요청
-LoginServer -> Browser: accessToken, refreshToken
-Browser -> Browser: 토큰 저장(쿠키 또는 localStorage). 해당 쿠키는 getServerProps에서도 사용가능
-Browser -> ServiceAPI: 서비스 호출 ( with accessToken )
-@enduml
